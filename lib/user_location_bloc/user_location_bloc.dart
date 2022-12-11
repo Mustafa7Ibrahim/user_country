@@ -17,7 +17,8 @@ class UserLocationBloc extends Bloc<UserLocationEvent, UserLocationState> {
           started: (value) async {
             emit(const _Loading());
             final IpData ipData = await location.getCountryCode();
-            final country = Country.parse(ipData.location.countryFromIP.code!);
+            final country =
+                Country.parse(ipData.location!.countryFromIP!.code!);
             emit(_Loaded(country));
           },
           update: (value) {

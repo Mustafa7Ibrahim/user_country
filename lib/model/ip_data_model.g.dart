@@ -8,24 +8,21 @@ part of 'ip_data_model.dart';
 
 _$_IpData _$$_IpDataFromJson(Map<String, dynamic> json) => _$_IpData(
       ip: json['ip'] as String?,
-      type: json['type'] as String?,
-      hostname: json['hostname'] as String?,
-      carrier: Carrier.fromJson(json['carrier'] as Map<String, dynamic>?),
-      company: Company.fromJson(json['company'] as Map<String, dynamic>?),
-      connection:
-          Connection.fromJson(json['connection'] as Map<String, dynamic>?),
-      currency: Currency.fromJson(json['currency'] as Map<String, dynamic>?),
-      location: Location.fromJson(json['location'] as Map<String, dynamic>?),
+      carrier: json['carrier'] == null
+          ? null
+          : Carrier.fromJson(json['carrier'] as Map<String, dynamic>?),
+      connection: json['connection'] == null
+          ? null
+          : Connection.fromJson(json['connection'] as Map<String, dynamic>?),
+      location: json['location'] == null
+          ? null
+          : Location.fromJson(json['location'] as Map<String, dynamic>?),
     );
 
 Map<String, dynamic> _$$_IpDataToJson(_$_IpData instance) => <String, dynamic>{
       'ip': instance.ip,
-      'type': instance.type,
-      'hostname': instance.hostname,
       'carrier': instance.carrier,
-      'company': instance.company,
       'connection': instance.connection,
-      'currency': instance.currency,
       'location': instance.location,
     };
 
@@ -40,19 +37,6 @@ Map<String, dynamic> _$$_CarrierToJson(_$_Carrier instance) =>
       'name': instance.name,
       'mcc': instance.mcc,
       'mnc': instance.mnc,
-    };
-
-_$_Company _$$_CompanyFromJson(Map<String, dynamic> json) => _$_Company(
-      domain: json['domain'] as String?,
-      name: json['name'] as String?,
-      type: json['type'] as String?,
-    );
-
-Map<String, dynamic> _$$_CompanyToJson(_$_Company instance) =>
-    <String, dynamic>{
-      'domain': instance.domain,
-      'name': instance.name,
-      'type': instance.type,
     };
 
 _$_Connection _$$_ConnectionFromJson(Map<String, dynamic> json) =>
@@ -73,54 +57,17 @@ Map<String, dynamic> _$$_ConnectionToJson(_$_Connection instance) =>
       'type': instance.type,
     };
 
-_$_Currency _$$_CurrencyFromJson(Map<String, dynamic> json) => _$_Currency(
-      code: json['code'] as String?,
-      name: json['name'] as String?,
-      nameNative: json['nameNative'] as String?,
-      plural: json['plural'] as String?,
-      pluralNative: json['pluralNative'] as String?,
-      symbol: json['symbol'] as String?,
-      symbolNative: json['symbolNative'] as String?,
-      format: Format.fromJson(json['format'] as Map<String, dynamic>?),
-    );
-
-Map<String, dynamic> _$$_CurrencyToJson(_$_Currency instance) =>
-    <String, dynamic>{
-      'code': instance.code,
-      'name': instance.name,
-      'nameNative': instance.nameNative,
-      'plural': instance.plural,
-      'pluralNative': instance.pluralNative,
-      'symbol': instance.symbol,
-      'symbolNative': instance.symbolNative,
-      'format': instance.format,
-    };
-
-_$_Format _$$_FormatFromJson(Map<String, dynamic> json) => _$_Format(
-      negative: Tive.fromJson(json['negative'] as Map<String, dynamic>?),
-      positive: Tive.fromJson(json['positive'] as Map<String, dynamic>?),
-    );
-
-Map<String, dynamic> _$$_FormatToJson(_$_Format instance) => <String, dynamic>{
-      'negative': instance.negative,
-      'positive': instance.positive,
-    };
-
-_$_Tive _$$_TiveFromJson(Map<String, dynamic> json) => _$_Tive(
-      prefix: json['prefix'] as String?,
-      suffix: json['suffix'] as String?,
-    );
-
-Map<String, dynamic> _$$_TiveToJson(_$_Tive instance) => <String, dynamic>{
-      'prefix': instance.prefix,
-      'suffix': instance.suffix,
-    };
-
 _$_Location _$$_LocationFromJson(Map<String, dynamic> json) => _$_Location(
-      continent: Continent.fromJson(json['continent'] as Map<String, dynamic>?),
-      countryFromIP: CountryFromIP.fromJson(
-          json['countryFromIP'] as Map<String, dynamic>?),
-      region: Continent.fromJson(json['region'] as Map<String, dynamic>?),
+      continent: json['continent'] == null
+          ? null
+          : Continent.fromJson(json['continent'] as Map<String, dynamic>?),
+      countryFromIP: json['countryFromIP'] == null
+          ? null
+          : CountryFromIP.fromJson(
+              json['countryFromIP'] as Map<String, dynamic>?),
+      region: json['region'] == null
+          ? null
+          : Continent.fromJson(json['region'] as Map<String, dynamic>?),
       city: json['city'] as String?,
       postal: json['postal'] as String?,
       latitude: (json['latitude'] as num?)?.toDouble(),
@@ -154,8 +101,9 @@ Map<String, dynamic> _$$_ContinentToJson(_$_Continent instance) =>
 _$_CountryFromIP _$$_CountryFromIPFromJson(Map<String, dynamic> json) =>
     _$_CountryFromIP(
       area: json['area'] as int?,
-      borders:
-          (json['borders'] as List<dynamic>).map((e) => e as String?).toList(),
+      borders: (json['borders'] as List<dynamic>?)
+          ?.map((e) => e as String?)
+          .toList(),
       callingCode: json['callingCode'] as String?,
       capital: json['capital'] as String?,
       code: json['code'] as String?,

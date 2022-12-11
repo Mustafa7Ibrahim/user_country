@@ -21,13 +21,9 @@ IpData _$IpDataFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$IpData {
   String? get ip => throw _privateConstructorUsedError;
-  String? get type => throw _privateConstructorUsedError;
-  String? get hostname => throw _privateConstructorUsedError;
-  Carrier get carrier => throw _privateConstructorUsedError;
-  Company get company => throw _privateConstructorUsedError;
-  Connection get connection => throw _privateConstructorUsedError;
-  Currency get currency => throw _privateConstructorUsedError;
-  Location get location => throw _privateConstructorUsedError;
+  Carrier? get carrier => throw _privateConstructorUsedError;
+  Connection? get connection => throw _privateConstructorUsedError;
+  Location? get location => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -41,19 +37,13 @@ abstract class $IpDataCopyWith<$Res> {
   @useResult
   $Res call(
       {String? ip,
-      String? type,
-      String? hostname,
-      Carrier carrier,
-      Company company,
-      Connection connection,
-      Currency currency,
-      Location location});
+      Carrier? carrier,
+      Connection? connection,
+      Location? location});
 
-  $CarrierCopyWith<$Res> get carrier;
-  $CompanyCopyWith<$Res> get company;
-  $ConnectionCopyWith<$Res> get connection;
-  $CurrencyCopyWith<$Res> get currency;
-  $LocationCopyWith<$Res> get location;
+  $CarrierCopyWith<$Res>? get carrier;
+  $ConnectionCopyWith<$Res>? get connection;
+  $LocationCopyWith<$Res>? get location;
 }
 
 /// @nodoc
@@ -70,86 +60,62 @@ class _$IpDataCopyWithImpl<$Res, $Val extends IpData>
   @override
   $Res call({
     Object? ip = freezed,
-    Object? type = freezed,
-    Object? hostname = freezed,
-    Object? carrier = null,
-    Object? company = null,
-    Object? connection = null,
-    Object? currency = null,
-    Object? location = null,
+    Object? carrier = freezed,
+    Object? connection = freezed,
+    Object? location = freezed,
   }) {
     return _then(_value.copyWith(
       ip: freezed == ip
           ? _value.ip
           : ip // ignore: cast_nullable_to_non_nullable
               as String?,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String?,
-      hostname: freezed == hostname
-          ? _value.hostname
-          : hostname // ignore: cast_nullable_to_non_nullable
-              as String?,
-      carrier: null == carrier
+      carrier: freezed == carrier
           ? _value.carrier
           : carrier // ignore: cast_nullable_to_non_nullable
-              as Carrier,
-      company: null == company
-          ? _value.company
-          : company // ignore: cast_nullable_to_non_nullable
-              as Company,
-      connection: null == connection
+              as Carrier?,
+      connection: freezed == connection
           ? _value.connection
           : connection // ignore: cast_nullable_to_non_nullable
-              as Connection,
-      currency: null == currency
-          ? _value.currency
-          : currency // ignore: cast_nullable_to_non_nullable
-              as Currency,
-      location: null == location
+              as Connection?,
+      location: freezed == location
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
-              as Location,
+              as Location?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $CarrierCopyWith<$Res> get carrier {
-    return $CarrierCopyWith<$Res>(_value.carrier, (value) {
+  $CarrierCopyWith<$Res>? get carrier {
+    if (_value.carrier == null) {
+      return null;
+    }
+
+    return $CarrierCopyWith<$Res>(_value.carrier!, (value) {
       return _then(_value.copyWith(carrier: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $CompanyCopyWith<$Res> get company {
-    return $CompanyCopyWith<$Res>(_value.company, (value) {
-      return _then(_value.copyWith(company: value) as $Val);
-    });
-  }
+  $ConnectionCopyWith<$Res>? get connection {
+    if (_value.connection == null) {
+      return null;
+    }
 
-  @override
-  @pragma('vm:prefer-inline')
-  $ConnectionCopyWith<$Res> get connection {
-    return $ConnectionCopyWith<$Res>(_value.connection, (value) {
+    return $ConnectionCopyWith<$Res>(_value.connection!, (value) {
       return _then(_value.copyWith(connection: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $CurrencyCopyWith<$Res> get currency {
-    return $CurrencyCopyWith<$Res>(_value.currency, (value) {
-      return _then(_value.copyWith(currency: value) as $Val);
-    });
-  }
+  $LocationCopyWith<$Res>? get location {
+    if (_value.location == null) {
+      return null;
+    }
 
-  @override
-  @pragma('vm:prefer-inline')
-  $LocationCopyWith<$Res> get location {
-    return $LocationCopyWith<$Res>(_value.location, (value) {
+    return $LocationCopyWith<$Res>(_value.location!, (value) {
       return _then(_value.copyWith(location: value) as $Val);
     });
   }
@@ -163,24 +129,16 @@ abstract class _$$_IpDataCopyWith<$Res> implements $IpDataCopyWith<$Res> {
   @useResult
   $Res call(
       {String? ip,
-      String? type,
-      String? hostname,
-      Carrier carrier,
-      Company company,
-      Connection connection,
-      Currency currency,
-      Location location});
+      Carrier? carrier,
+      Connection? connection,
+      Location? location});
 
   @override
-  $CarrierCopyWith<$Res> get carrier;
+  $CarrierCopyWith<$Res>? get carrier;
   @override
-  $CompanyCopyWith<$Res> get company;
+  $ConnectionCopyWith<$Res>? get connection;
   @override
-  $ConnectionCopyWith<$Res> get connection;
-  @override
-  $CurrencyCopyWith<$Res> get currency;
-  @override
-  $LocationCopyWith<$Res> get location;
+  $LocationCopyWith<$Res>? get location;
 }
 
 /// @nodoc
@@ -194,47 +152,27 @@ class __$$_IpDataCopyWithImpl<$Res>
   @override
   $Res call({
     Object? ip = freezed,
-    Object? type = freezed,
-    Object? hostname = freezed,
-    Object? carrier = null,
-    Object? company = null,
-    Object? connection = null,
-    Object? currency = null,
-    Object? location = null,
+    Object? carrier = freezed,
+    Object? connection = freezed,
+    Object? location = freezed,
   }) {
     return _then(_$_IpData(
       ip: freezed == ip
           ? _value.ip
           : ip // ignore: cast_nullable_to_non_nullable
               as String?,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String?,
-      hostname: freezed == hostname
-          ? _value.hostname
-          : hostname // ignore: cast_nullable_to_non_nullable
-              as String?,
-      carrier: null == carrier
+      carrier: freezed == carrier
           ? _value.carrier
           : carrier // ignore: cast_nullable_to_non_nullable
-              as Carrier,
-      company: null == company
-          ? _value.company
-          : company // ignore: cast_nullable_to_non_nullable
-              as Company,
-      connection: null == connection
+              as Carrier?,
+      connection: freezed == connection
           ? _value.connection
           : connection // ignore: cast_nullable_to_non_nullable
-              as Connection,
-      currency: null == currency
-          ? _value.currency
-          : currency // ignore: cast_nullable_to_non_nullable
-              as Currency,
-      location: null == location
+              as Connection?,
+      location: freezed == location
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
-              as Location,
+              as Location?,
     ));
   }
 }
@@ -244,12 +182,8 @@ class __$$_IpDataCopyWithImpl<$Res>
 class _$_IpData implements _IpData {
   const _$_IpData(
       {required this.ip,
-      required this.type,
-      required this.hostname,
       required this.carrier,
-      required this.company,
       required this.connection,
-      required this.currency,
       required this.location});
 
   factory _$_IpData.fromJson(Map<String, dynamic> json) =>
@@ -258,23 +192,15 @@ class _$_IpData implements _IpData {
   @override
   final String? ip;
   @override
-  final String? type;
+  final Carrier? carrier;
   @override
-  final String? hostname;
+  final Connection? connection;
   @override
-  final Carrier carrier;
-  @override
-  final Company company;
-  @override
-  final Connection connection;
-  @override
-  final Currency currency;
-  @override
-  final Location location;
+  final Location? location;
 
   @override
   String toString() {
-    return 'IpData(ip: $ip, type: $type, hostname: $hostname, carrier: $carrier, company: $company, connection: $connection, currency: $currency, location: $location)';
+    return 'IpData(ip: $ip, carrier: $carrier, connection: $connection, location: $location)';
   }
 
   @override
@@ -283,23 +209,17 @@ class _$_IpData implements _IpData {
         (other.runtimeType == runtimeType &&
             other is _$_IpData &&
             (identical(other.ip, ip) || other.ip == ip) &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.hostname, hostname) ||
-                other.hostname == hostname) &&
             (identical(other.carrier, carrier) || other.carrier == carrier) &&
-            (identical(other.company, company) || other.company == company) &&
             (identical(other.connection, connection) ||
                 other.connection == connection) &&
-            (identical(other.currency, currency) ||
-                other.currency == currency) &&
             (identical(other.location, location) ||
                 other.location == location));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, ip, type, hostname, carrier,
-      company, connection, currency, location);
+  int get hashCode =>
+      Object.hash(runtimeType, ip, carrier, connection, location);
 
   @JsonKey(ignore: true)
   @override
@@ -318,32 +238,20 @@ class _$_IpData implements _IpData {
 abstract class _IpData implements IpData {
   const factory _IpData(
       {required final String? ip,
-      required final String? type,
-      required final String? hostname,
-      required final Carrier carrier,
-      required final Company company,
-      required final Connection connection,
-      required final Currency currency,
-      required final Location location}) = _$_IpData;
+      required final Carrier? carrier,
+      required final Connection? connection,
+      required final Location? location}) = _$_IpData;
 
   factory _IpData.fromJson(Map<String, dynamic> json) = _$_IpData.fromJson;
 
   @override
   String? get ip;
   @override
-  String? get type;
+  Carrier? get carrier;
   @override
-  String? get hostname;
+  Connection? get connection;
   @override
-  Carrier get carrier;
-  @override
-  Company get company;
-  @override
-  Connection get connection;
-  @override
-  Currency get currency;
-  @override
-  Location get location;
+  Location? get location;
   @override
   @JsonKey(ignore: true)
   _$$_IpDataCopyWith<_$_IpData> get copyWith =>
@@ -513,173 +421,6 @@ abstract class _Carrier implements Carrier {
   @override
   @JsonKey(ignore: true)
   _$$_CarrierCopyWith<_$_Carrier> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-Company _$CompanyFromJson(Map<String, dynamic> json) {
-  return _Company.fromJson(json);
-}
-
-/// @nodoc
-mixin _$Company {
-  String? get domain => throw _privateConstructorUsedError;
-  String? get name => throw _privateConstructorUsedError;
-  String? get type => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $CompanyCopyWith<Company> get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $CompanyCopyWith<$Res> {
-  factory $CompanyCopyWith(Company value, $Res Function(Company) then) =
-      _$CompanyCopyWithImpl<$Res, Company>;
-  @useResult
-  $Res call({String? domain, String? name, String? type});
-}
-
-/// @nodoc
-class _$CompanyCopyWithImpl<$Res, $Val extends Company>
-    implements $CompanyCopyWith<$Res> {
-  _$CompanyCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? domain = freezed,
-    Object? name = freezed,
-    Object? type = freezed,
-  }) {
-    return _then(_value.copyWith(
-      domain: freezed == domain
-          ? _value.domain
-          : domain // ignore: cast_nullable_to_non_nullable
-              as String?,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$_CompanyCopyWith<$Res> implements $CompanyCopyWith<$Res> {
-  factory _$$_CompanyCopyWith(
-          _$_Company value, $Res Function(_$_Company) then) =
-      __$$_CompanyCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String? domain, String? name, String? type});
-}
-
-/// @nodoc
-class __$$_CompanyCopyWithImpl<$Res>
-    extends _$CompanyCopyWithImpl<$Res, _$_Company>
-    implements _$$_CompanyCopyWith<$Res> {
-  __$$_CompanyCopyWithImpl(_$_Company _value, $Res Function(_$_Company) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? domain = freezed,
-    Object? name = freezed,
-    Object? type = freezed,
-  }) {
-    return _then(_$_Company(
-      domain: freezed == domain
-          ? _value.domain
-          : domain // ignore: cast_nullable_to_non_nullable
-              as String?,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$_Company implements _Company {
-  const _$_Company(
-      {required this.domain, required this.name, required this.type});
-
-  factory _$_Company.fromJson(Map<String, dynamic> json) =>
-      _$$_CompanyFromJson(json);
-
-  @override
-  final String? domain;
-  @override
-  final String? name;
-  @override
-  final String? type;
-
-  @override
-  String toString() {
-    return 'Company(domain: $domain, name: $name, type: $type)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_Company &&
-            (identical(other.domain, domain) || other.domain == domain) &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.type, type) || other.type == type));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(runtimeType, domain, name, type);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$_CompanyCopyWith<_$_Company> get copyWith =>
-      __$$_CompanyCopyWithImpl<_$_Company>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_CompanyToJson(
-      this,
-    );
-  }
-}
-
-abstract class _Company implements Company {
-  const factory _Company(
-      {required final String? domain,
-      required final String? name,
-      required final String? type}) = _$_Company;
-
-  factory _Company.fromJson(Map<String, dynamic> json) = _$_Company.fromJson;
-
-  @override
-  String? get domain;
-  @override
-  String? get name;
-  @override
-  String? get type;
-  @override
-  @JsonKey(ignore: true)
-  _$$_CompanyCopyWith<_$_Company> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -905,626 +646,15 @@ abstract class _Connection implements Connection {
       throw _privateConstructorUsedError;
 }
 
-Currency _$CurrencyFromJson(Map<String, dynamic> json) {
-  return _Currency.fromJson(json);
-}
-
-/// @nodoc
-mixin _$Currency {
-  String? get code => throw _privateConstructorUsedError;
-  String? get name => throw _privateConstructorUsedError;
-  String? get nameNative => throw _privateConstructorUsedError;
-  String? get plural => throw _privateConstructorUsedError;
-  String? get pluralNative => throw _privateConstructorUsedError;
-  String? get symbol => throw _privateConstructorUsedError;
-  String? get symbolNative => throw _privateConstructorUsedError;
-  Format get format => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $CurrencyCopyWith<Currency> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $CurrencyCopyWith<$Res> {
-  factory $CurrencyCopyWith(Currency value, $Res Function(Currency) then) =
-      _$CurrencyCopyWithImpl<$Res, Currency>;
-  @useResult
-  $Res call(
-      {String? code,
-      String? name,
-      String? nameNative,
-      String? plural,
-      String? pluralNative,
-      String? symbol,
-      String? symbolNative,
-      Format format});
-
-  $FormatCopyWith<$Res> get format;
-}
-
-/// @nodoc
-class _$CurrencyCopyWithImpl<$Res, $Val extends Currency>
-    implements $CurrencyCopyWith<$Res> {
-  _$CurrencyCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? code = freezed,
-    Object? name = freezed,
-    Object? nameNative = freezed,
-    Object? plural = freezed,
-    Object? pluralNative = freezed,
-    Object? symbol = freezed,
-    Object? symbolNative = freezed,
-    Object? format = null,
-  }) {
-    return _then(_value.copyWith(
-      code: freezed == code
-          ? _value.code
-          : code // ignore: cast_nullable_to_non_nullable
-              as String?,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      nameNative: freezed == nameNative
-          ? _value.nameNative
-          : nameNative // ignore: cast_nullable_to_non_nullable
-              as String?,
-      plural: freezed == plural
-          ? _value.plural
-          : plural // ignore: cast_nullable_to_non_nullable
-              as String?,
-      pluralNative: freezed == pluralNative
-          ? _value.pluralNative
-          : pluralNative // ignore: cast_nullable_to_non_nullable
-              as String?,
-      symbol: freezed == symbol
-          ? _value.symbol
-          : symbol // ignore: cast_nullable_to_non_nullable
-              as String?,
-      symbolNative: freezed == symbolNative
-          ? _value.symbolNative
-          : symbolNative // ignore: cast_nullable_to_non_nullable
-              as String?,
-      format: null == format
-          ? _value.format
-          : format // ignore: cast_nullable_to_non_nullable
-              as Format,
-    ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $FormatCopyWith<$Res> get format {
-    return $FormatCopyWith<$Res>(_value.format, (value) {
-      return _then(_value.copyWith(format: value) as $Val);
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$_CurrencyCopyWith<$Res> implements $CurrencyCopyWith<$Res> {
-  factory _$$_CurrencyCopyWith(
-          _$_Currency value, $Res Function(_$_Currency) then) =
-      __$$_CurrencyCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String? code,
-      String? name,
-      String? nameNative,
-      String? plural,
-      String? pluralNative,
-      String? symbol,
-      String? symbolNative,
-      Format format});
-
-  @override
-  $FormatCopyWith<$Res> get format;
-}
-
-/// @nodoc
-class __$$_CurrencyCopyWithImpl<$Res>
-    extends _$CurrencyCopyWithImpl<$Res, _$_Currency>
-    implements _$$_CurrencyCopyWith<$Res> {
-  __$$_CurrencyCopyWithImpl(
-      _$_Currency _value, $Res Function(_$_Currency) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? code = freezed,
-    Object? name = freezed,
-    Object? nameNative = freezed,
-    Object? plural = freezed,
-    Object? pluralNative = freezed,
-    Object? symbol = freezed,
-    Object? symbolNative = freezed,
-    Object? format = null,
-  }) {
-    return _then(_$_Currency(
-      code: freezed == code
-          ? _value.code
-          : code // ignore: cast_nullable_to_non_nullable
-              as String?,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      nameNative: freezed == nameNative
-          ? _value.nameNative
-          : nameNative // ignore: cast_nullable_to_non_nullable
-              as String?,
-      plural: freezed == plural
-          ? _value.plural
-          : plural // ignore: cast_nullable_to_non_nullable
-              as String?,
-      pluralNative: freezed == pluralNative
-          ? _value.pluralNative
-          : pluralNative // ignore: cast_nullable_to_non_nullable
-              as String?,
-      symbol: freezed == symbol
-          ? _value.symbol
-          : symbol // ignore: cast_nullable_to_non_nullable
-              as String?,
-      symbolNative: freezed == symbolNative
-          ? _value.symbolNative
-          : symbolNative // ignore: cast_nullable_to_non_nullable
-              as String?,
-      format: null == format
-          ? _value.format
-          : format // ignore: cast_nullable_to_non_nullable
-              as Format,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$_Currency implements _Currency {
-  const _$_Currency(
-      {required this.code,
-      required this.name,
-      required this.nameNative,
-      required this.plural,
-      required this.pluralNative,
-      required this.symbol,
-      required this.symbolNative,
-      required this.format});
-
-  factory _$_Currency.fromJson(Map<String, dynamic> json) =>
-      _$$_CurrencyFromJson(json);
-
-  @override
-  final String? code;
-  @override
-  final String? name;
-  @override
-  final String? nameNative;
-  @override
-  final String? plural;
-  @override
-  final String? pluralNative;
-  @override
-  final String? symbol;
-  @override
-  final String? symbolNative;
-  @override
-  final Format format;
-
-  @override
-  String toString() {
-    return 'Currency(code: $code, name: $name, nameNative: $nameNative, plural: $plural, pluralNative: $pluralNative, symbol: $symbol, symbolNative: $symbolNative, format: $format)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_Currency &&
-            (identical(other.code, code) || other.code == code) &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.nameNative, nameNative) ||
-                other.nameNative == nameNative) &&
-            (identical(other.plural, plural) || other.plural == plural) &&
-            (identical(other.pluralNative, pluralNative) ||
-                other.pluralNative == pluralNative) &&
-            (identical(other.symbol, symbol) || other.symbol == symbol) &&
-            (identical(other.symbolNative, symbolNative) ||
-                other.symbolNative == symbolNative) &&
-            (identical(other.format, format) || other.format == format));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(runtimeType, code, name, nameNative, plural,
-      pluralNative, symbol, symbolNative, format);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$_CurrencyCopyWith<_$_Currency> get copyWith =>
-      __$$_CurrencyCopyWithImpl<_$_Currency>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_CurrencyToJson(
-      this,
-    );
-  }
-}
-
-abstract class _Currency implements Currency {
-  const factory _Currency(
-      {required final String? code,
-      required final String? name,
-      required final String? nameNative,
-      required final String? plural,
-      required final String? pluralNative,
-      required final String? symbol,
-      required final String? symbolNative,
-      required final Format format}) = _$_Currency;
-
-  factory _Currency.fromJson(Map<String, dynamic> json) = _$_Currency.fromJson;
-
-  @override
-  String? get code;
-  @override
-  String? get name;
-  @override
-  String? get nameNative;
-  @override
-  String? get plural;
-  @override
-  String? get pluralNative;
-  @override
-  String? get symbol;
-  @override
-  String? get symbolNative;
-  @override
-  Format get format;
-  @override
-  @JsonKey(ignore: true)
-  _$$_CurrencyCopyWith<_$_Currency> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-Format _$FormatFromJson(Map<String, dynamic> json) {
-  return _Format.fromJson(json);
-}
-
-/// @nodoc
-mixin _$Format {
-  Tive get negative => throw _privateConstructorUsedError;
-  Tive get positive => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $FormatCopyWith<Format> get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $FormatCopyWith<$Res> {
-  factory $FormatCopyWith(Format value, $Res Function(Format) then) =
-      _$FormatCopyWithImpl<$Res, Format>;
-  @useResult
-  $Res call({Tive negative, Tive positive});
-
-  $TiveCopyWith<$Res> get negative;
-  $TiveCopyWith<$Res> get positive;
-}
-
-/// @nodoc
-class _$FormatCopyWithImpl<$Res, $Val extends Format>
-    implements $FormatCopyWith<$Res> {
-  _$FormatCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? negative = null,
-    Object? positive = null,
-  }) {
-    return _then(_value.copyWith(
-      negative: null == negative
-          ? _value.negative
-          : negative // ignore: cast_nullable_to_non_nullable
-              as Tive,
-      positive: null == positive
-          ? _value.positive
-          : positive // ignore: cast_nullable_to_non_nullable
-              as Tive,
-    ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $TiveCopyWith<$Res> get negative {
-    return $TiveCopyWith<$Res>(_value.negative, (value) {
-      return _then(_value.copyWith(negative: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $TiveCopyWith<$Res> get positive {
-    return $TiveCopyWith<$Res>(_value.positive, (value) {
-      return _then(_value.copyWith(positive: value) as $Val);
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$_FormatCopyWith<$Res> implements $FormatCopyWith<$Res> {
-  factory _$$_FormatCopyWith(_$_Format value, $Res Function(_$_Format) then) =
-      __$$_FormatCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({Tive negative, Tive positive});
-
-  @override
-  $TiveCopyWith<$Res> get negative;
-  @override
-  $TiveCopyWith<$Res> get positive;
-}
-
-/// @nodoc
-class __$$_FormatCopyWithImpl<$Res>
-    extends _$FormatCopyWithImpl<$Res, _$_Format>
-    implements _$$_FormatCopyWith<$Res> {
-  __$$_FormatCopyWithImpl(_$_Format _value, $Res Function(_$_Format) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? negative = null,
-    Object? positive = null,
-  }) {
-    return _then(_$_Format(
-      negative: null == negative
-          ? _value.negative
-          : negative // ignore: cast_nullable_to_non_nullable
-              as Tive,
-      positive: null == positive
-          ? _value.positive
-          : positive // ignore: cast_nullable_to_non_nullable
-              as Tive,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$_Format implements _Format {
-  const _$_Format({required this.negative, required this.positive});
-
-  factory _$_Format.fromJson(Map<String, dynamic> json) =>
-      _$$_FormatFromJson(json);
-
-  @override
-  final Tive negative;
-  @override
-  final Tive positive;
-
-  @override
-  String toString() {
-    return 'Format(negative: $negative, positive: $positive)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_Format &&
-            (identical(other.negative, negative) ||
-                other.negative == negative) &&
-            (identical(other.positive, positive) ||
-                other.positive == positive));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(runtimeType, negative, positive);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$_FormatCopyWith<_$_Format> get copyWith =>
-      __$$_FormatCopyWithImpl<_$_Format>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_FormatToJson(
-      this,
-    );
-  }
-}
-
-abstract class _Format implements Format {
-  const factory _Format(
-      {required final Tive negative, required final Tive positive}) = _$_Format;
-
-  factory _Format.fromJson(Map<String, dynamic> json) = _$_Format.fromJson;
-
-  @override
-  Tive get negative;
-  @override
-  Tive get positive;
-  @override
-  @JsonKey(ignore: true)
-  _$$_FormatCopyWith<_$_Format> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-Tive _$TiveFromJson(Map<String, dynamic> json) {
-  return _Tive.fromJson(json);
-}
-
-/// @nodoc
-mixin _$Tive {
-  String? get prefix => throw _privateConstructorUsedError;
-  String? get suffix => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $TiveCopyWith<Tive> get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $TiveCopyWith<$Res> {
-  factory $TiveCopyWith(Tive value, $Res Function(Tive) then) =
-      _$TiveCopyWithImpl<$Res, Tive>;
-  @useResult
-  $Res call({String? prefix, String? suffix});
-}
-
-/// @nodoc
-class _$TiveCopyWithImpl<$Res, $Val extends Tive>
-    implements $TiveCopyWith<$Res> {
-  _$TiveCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? prefix = freezed,
-    Object? suffix = freezed,
-  }) {
-    return _then(_value.copyWith(
-      prefix: freezed == prefix
-          ? _value.prefix
-          : prefix // ignore: cast_nullable_to_non_nullable
-              as String?,
-      suffix: freezed == suffix
-          ? _value.suffix
-          : suffix // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$_TiveCopyWith<$Res> implements $TiveCopyWith<$Res> {
-  factory _$$_TiveCopyWith(_$_Tive value, $Res Function(_$_Tive) then) =
-      __$$_TiveCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String? prefix, String? suffix});
-}
-
-/// @nodoc
-class __$$_TiveCopyWithImpl<$Res> extends _$TiveCopyWithImpl<$Res, _$_Tive>
-    implements _$$_TiveCopyWith<$Res> {
-  __$$_TiveCopyWithImpl(_$_Tive _value, $Res Function(_$_Tive) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? prefix = freezed,
-    Object? suffix = freezed,
-  }) {
-    return _then(_$_Tive(
-      prefix: freezed == prefix
-          ? _value.prefix
-          : prefix // ignore: cast_nullable_to_non_nullable
-              as String?,
-      suffix: freezed == suffix
-          ? _value.suffix
-          : suffix // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$_Tive implements _Tive {
-  const _$_Tive({required this.prefix, required this.suffix});
-
-  factory _$_Tive.fromJson(Map<String, dynamic> json) => _$$_TiveFromJson(json);
-
-  @override
-  final String? prefix;
-  @override
-  final String? suffix;
-
-  @override
-  String toString() {
-    return 'Tive(prefix: $prefix, suffix: $suffix)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_Tive &&
-            (identical(other.prefix, prefix) || other.prefix == prefix) &&
-            (identical(other.suffix, suffix) || other.suffix == suffix));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(runtimeType, prefix, suffix);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$_TiveCopyWith<_$_Tive> get copyWith =>
-      __$$_TiveCopyWithImpl<_$_Tive>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_TiveToJson(
-      this,
-    );
-  }
-}
-
-abstract class _Tive implements Tive {
-  const factory _Tive(
-      {required final String? prefix, required final String? suffix}) = _$_Tive;
-
-  factory _Tive.fromJson(Map<String, dynamic> json) = _$_Tive.fromJson;
-
-  @override
-  String? get prefix;
-  @override
-  String? get suffix;
-  @override
-  @JsonKey(ignore: true)
-  _$$_TiveCopyWith<_$_Tive> get copyWith => throw _privateConstructorUsedError;
-}
-
 Location _$LocationFromJson(Map<String, dynamic> json) {
   return _Location.fromJson(json);
 }
 
 /// @nodoc
 mixin _$Location {
-  Continent get continent => throw _privateConstructorUsedError;
-  CountryFromIP get countryFromIP => throw _privateConstructorUsedError;
-  Continent get region => throw _privateConstructorUsedError;
+  Continent? get continent => throw _privateConstructorUsedError;
+  CountryFromIP? get countryFromIP => throw _privateConstructorUsedError;
+  Continent? get region => throw _privateConstructorUsedError;
   String? get city => throw _privateConstructorUsedError;
   String? get postal => throw _privateConstructorUsedError;
   double? get latitude => throw _privateConstructorUsedError;
@@ -1543,18 +673,18 @@ abstract class $LocationCopyWith<$Res> {
       _$LocationCopyWithImpl<$Res, Location>;
   @useResult
   $Res call(
-      {Continent continent,
-      CountryFromIP countryFromIP,
-      Continent region,
+      {Continent? continent,
+      CountryFromIP? countryFromIP,
+      Continent? region,
       String? city,
       String? postal,
       double? latitude,
       double? longitude,
       bool? inEu});
 
-  $ContinentCopyWith<$Res> get continent;
-  $CountryFromIPCopyWith<$Res> get countryFromIP;
-  $ContinentCopyWith<$Res> get region;
+  $ContinentCopyWith<$Res>? get continent;
+  $CountryFromIPCopyWith<$Res>? get countryFromIP;
+  $ContinentCopyWith<$Res>? get region;
 }
 
 /// @nodoc
@@ -1570,9 +700,9 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? continent = null,
-    Object? countryFromIP = null,
-    Object? region = null,
+    Object? continent = freezed,
+    Object? countryFromIP = freezed,
+    Object? region = freezed,
     Object? city = freezed,
     Object? postal = freezed,
     Object? latitude = freezed,
@@ -1580,18 +710,18 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
     Object? inEu = freezed,
   }) {
     return _then(_value.copyWith(
-      continent: null == continent
+      continent: freezed == continent
           ? _value.continent
           : continent // ignore: cast_nullable_to_non_nullable
-              as Continent,
-      countryFromIP: null == countryFromIP
+              as Continent?,
+      countryFromIP: freezed == countryFromIP
           ? _value.countryFromIP
           : countryFromIP // ignore: cast_nullable_to_non_nullable
-              as CountryFromIP,
-      region: null == region
+              as CountryFromIP?,
+      region: freezed == region
           ? _value.region
           : region // ignore: cast_nullable_to_non_nullable
-              as Continent,
+              as Continent?,
       city: freezed == city
           ? _value.city
           : city // ignore: cast_nullable_to_non_nullable
@@ -1617,24 +747,36 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
 
   @override
   @pragma('vm:prefer-inline')
-  $ContinentCopyWith<$Res> get continent {
-    return $ContinentCopyWith<$Res>(_value.continent, (value) {
+  $ContinentCopyWith<$Res>? get continent {
+    if (_value.continent == null) {
+      return null;
+    }
+
+    return $ContinentCopyWith<$Res>(_value.continent!, (value) {
       return _then(_value.copyWith(continent: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $CountryFromIPCopyWith<$Res> get countryFromIP {
-    return $CountryFromIPCopyWith<$Res>(_value.countryFromIP, (value) {
+  $CountryFromIPCopyWith<$Res>? get countryFromIP {
+    if (_value.countryFromIP == null) {
+      return null;
+    }
+
+    return $CountryFromIPCopyWith<$Res>(_value.countryFromIP!, (value) {
       return _then(_value.copyWith(countryFromIP: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $ContinentCopyWith<$Res> get region {
-    return $ContinentCopyWith<$Res>(_value.region, (value) {
+  $ContinentCopyWith<$Res>? get region {
+    if (_value.region == null) {
+      return null;
+    }
+
+    return $ContinentCopyWith<$Res>(_value.region!, (value) {
       return _then(_value.copyWith(region: value) as $Val);
     });
   }
@@ -1648,9 +790,9 @@ abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {Continent continent,
-      CountryFromIP countryFromIP,
-      Continent region,
+      {Continent? continent,
+      CountryFromIP? countryFromIP,
+      Continent? region,
       String? city,
       String? postal,
       double? latitude,
@@ -1658,11 +800,11 @@ abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
       bool? inEu});
 
   @override
-  $ContinentCopyWith<$Res> get continent;
+  $ContinentCopyWith<$Res>? get continent;
   @override
-  $CountryFromIPCopyWith<$Res> get countryFromIP;
+  $CountryFromIPCopyWith<$Res>? get countryFromIP;
   @override
-  $ContinentCopyWith<$Res> get region;
+  $ContinentCopyWith<$Res>? get region;
 }
 
 /// @nodoc
@@ -1676,9 +818,9 @@ class __$$_LocationCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? continent = null,
-    Object? countryFromIP = null,
-    Object? region = null,
+    Object? continent = freezed,
+    Object? countryFromIP = freezed,
+    Object? region = freezed,
     Object? city = freezed,
     Object? postal = freezed,
     Object? latitude = freezed,
@@ -1686,18 +828,18 @@ class __$$_LocationCopyWithImpl<$Res>
     Object? inEu = freezed,
   }) {
     return _then(_$_Location(
-      continent: null == continent
+      continent: freezed == continent
           ? _value.continent
           : continent // ignore: cast_nullable_to_non_nullable
-              as Continent,
-      countryFromIP: null == countryFromIP
+              as Continent?,
+      countryFromIP: freezed == countryFromIP
           ? _value.countryFromIP
           : countryFromIP // ignore: cast_nullable_to_non_nullable
-              as CountryFromIP,
-      region: null == region
+              as CountryFromIP?,
+      region: freezed == region
           ? _value.region
           : region // ignore: cast_nullable_to_non_nullable
-              as Continent,
+              as Continent?,
       city: freezed == city
           ? _value.city
           : city // ignore: cast_nullable_to_non_nullable
@@ -1739,11 +881,11 @@ class _$_Location implements _Location {
       _$$_LocationFromJson(json);
 
   @override
-  final Continent continent;
+  final Continent? continent;
   @override
-  final CountryFromIP countryFromIP;
+  final CountryFromIP? countryFromIP;
   @override
-  final Continent region;
+  final Continent? region;
   @override
   final String? city;
   @override
@@ -1800,9 +942,9 @@ class _$_Location implements _Location {
 
 abstract class _Location implements Location {
   const factory _Location(
-      {required final Continent continent,
-      required final CountryFromIP countryFromIP,
-      required final Continent region,
+      {required final Continent? continent,
+      required final CountryFromIP? countryFromIP,
+      required final Continent? region,
       required final String? city,
       required final String? postal,
       required final double? latitude,
@@ -1812,11 +954,11 @@ abstract class _Location implements Location {
   factory _Location.fromJson(Map<String, dynamic> json) = _$_Location.fromJson;
 
   @override
-  Continent get continent;
+  Continent? get continent;
   @override
-  CountryFromIP get countryFromIP;
+  CountryFromIP? get countryFromIP;
   @override
-  Continent get region;
+  Continent? get region;
   @override
   String? get city;
   @override
@@ -1992,7 +1134,7 @@ CountryFromIP _$CountryFromIPFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$CountryFromIP {
   int? get area => throw _privateConstructorUsedError;
-  List<String?> get borders => throw _privateConstructorUsedError;
+  List<String?>? get borders => throw _privateConstructorUsedError;
   String? get callingCode => throw _privateConstructorUsedError;
   String? get capital => throw _privateConstructorUsedError;
   String? get code => throw _privateConstructorUsedError;
@@ -2016,7 +1158,7 @@ abstract class $CountryFromIPCopyWith<$Res> {
   @useResult
   $Res call(
       {int? area,
-      List<String?> borders,
+      List<String?>? borders,
       String? callingCode,
       String? capital,
       String? code,
@@ -2043,7 +1185,7 @@ class _$CountryFromIPCopyWithImpl<$Res, $Val extends CountryFromIP>
   @override
   $Res call({
     Object? area = freezed,
-    Object? borders = null,
+    Object? borders = freezed,
     Object? callingCode = freezed,
     Object? capital = freezed,
     Object? code = freezed,
@@ -2058,10 +1200,10 @@ class _$CountryFromIPCopyWithImpl<$Res, $Val extends CountryFromIP>
           ? _value.area
           : area // ignore: cast_nullable_to_non_nullable
               as int?,
-      borders: null == borders
+      borders: freezed == borders
           ? _value.borders
           : borders // ignore: cast_nullable_to_non_nullable
-              as List<String?>,
+              as List<String?>?,
       callingCode: freezed == callingCode
           ? _value.callingCode
           : callingCode // ignore: cast_nullable_to_non_nullable
@@ -2116,7 +1258,7 @@ abstract class _$$_CountryFromIPCopyWith<$Res>
   @useResult
   $Res call(
       {int? area,
-      List<String?> borders,
+      List<String?>? borders,
       String? callingCode,
       String? capital,
       String? code,
@@ -2142,7 +1284,7 @@ class __$$_CountryFromIPCopyWithImpl<$Res>
   @override
   $Res call({
     Object? area = freezed,
-    Object? borders = null,
+    Object? borders = freezed,
     Object? callingCode = freezed,
     Object? capital = freezed,
     Object? code = freezed,
@@ -2157,10 +1299,10 @@ class __$$_CountryFromIPCopyWithImpl<$Res>
           ? _value.area
           : area // ignore: cast_nullable_to_non_nullable
               as int?,
-      borders: null == borders
+      borders: freezed == borders
           ? _value._borders
           : borders // ignore: cast_nullable_to_non_nullable
-              as List<String?>,
+              as List<String?>?,
       callingCode: freezed == callingCode
           ? _value.callingCode
           : callingCode // ignore: cast_nullable_to_non_nullable
@@ -2202,7 +1344,7 @@ class __$$_CountryFromIPCopyWithImpl<$Res>
 class _$_CountryFromIP implements _CountryFromIP {
   const _$_CountryFromIP(
       {required this.area,
-      required final List<String?> borders,
+      required final List<String?>? borders,
       required this.callingCode,
       required this.capital,
       required this.code,
@@ -2218,11 +1360,13 @@ class _$_CountryFromIP implements _CountryFromIP {
 
   @override
   final int? area;
-  final List<String?> _borders;
+  final List<String?>? _borders;
   @override
-  List<String?> get borders {
+  List<String?>? get borders {
+    final value = _borders;
+    if (value == null) return null;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_borders);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
@@ -2299,7 +1443,7 @@ class _$_CountryFromIP implements _CountryFromIP {
 abstract class _CountryFromIP implements CountryFromIP {
   const factory _CountryFromIP(
       {required final int? area,
-      required final List<String?> borders,
+      required final List<String?>? borders,
       required final String? callingCode,
       required final String? capital,
       required final String? code,
@@ -2315,7 +1459,7 @@ abstract class _CountryFromIP implements CountryFromIP {
   @override
   int? get area;
   @override
-  List<String?> get borders;
+  List<String?>? get borders;
   @override
   String? get callingCode;
   @override

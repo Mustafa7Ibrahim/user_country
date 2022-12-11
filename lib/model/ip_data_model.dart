@@ -6,13 +6,9 @@ part 'ip_data_model.g.dart';
 class IpData with _$IpData {
   const factory IpData({
     required String? ip,
-    required String? type,
-    required String? hostname,
-    required Carrier carrier,
-    required Company company,
-    required Connection connection,
-    required Currency currency,
-    required Location location,
+    required Carrier? carrier,
+    required Connection? connection,
+    required Location? location,
   }) = _IpData;
 
   factory IpData.fromJson(Map<String, dynamic>? json) =>
@@ -32,18 +28,6 @@ class Carrier with _$Carrier {
 }
 
 @freezed
-class Company with _$Company {
-  const factory Company({
-    required String? domain,
-    required String? name,
-    required String? type,
-  }) = _Company;
-
-  factory Company.fromJson(Map<String, dynamic>? json) =>
-      _$CompanyFromJson(json ?? {});
-}
-
-@freezed
 class Connection with _$Connection {
   const factory Connection({
     required int? asn,
@@ -58,50 +42,11 @@ class Connection with _$Connection {
 }
 
 @freezed
-class Currency with _$Currency {
-  const factory Currency({
-    required String? code,
-    required String? name,
-    required String? nameNative,
-    required String? plural,
-    required String? pluralNative,
-    required String? symbol,
-    required String? symbolNative,
-    required Format format,
-  }) = _Currency;
-
-  factory Currency.fromJson(Map<String, dynamic>? json) =>
-      _$CurrencyFromJson(json ?? {});
-}
-
-@freezed
-class Format with _$Format {
-  const factory Format({
-    required Tive negative,
-    required Tive positive,
-  }) = _Format;
-
-  factory Format.fromJson(Map<String, dynamic>? json) =>
-      _$FormatFromJson(json ?? {});
-}
-
-@freezed
-class Tive with _$Tive {
-  const factory Tive({
-    required String? prefix,
-    required String? suffix,
-  }) = _Tive;
-
-  factory Tive.fromJson(Map<String, dynamic>? json) =>
-      _$TiveFromJson(json ?? {});
-}
-
-@freezed
 class Location with _$Location {
   const factory Location({
-    required Continent continent,
-    required CountryFromIP countryFromIP,
-    required Continent region,
+    required Continent? continent,
+    required CountryFromIP? countryFromIP,
+    required Continent? region,
     required String? city,
     required String? postal,
     required double? latitude,
@@ -128,7 +73,7 @@ class Continent with _$Continent {
 class CountryFromIP with _$CountryFromIP {
   const factory CountryFromIP({
     required int? area,
-    required List<String?> borders,
+    required List<String?>? borders,
     required String? callingCode,
     required String? capital,
     required String? code,
@@ -157,5 +102,3 @@ class Flag with _$Flag {
   factory Flag.fromJson(Map<String, dynamic>? json) =>
       _$FlagFromJson(json ?? {});
 }
-
-
