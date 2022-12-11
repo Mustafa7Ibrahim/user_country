@@ -653,7 +653,7 @@ Location _$LocationFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Location {
   Continent? get continent => throw _privateConstructorUsedError;
-  CountryFromIP? get countryFromIP => throw _privateConstructorUsedError;
+  Country? get countryFromIP => throw _privateConstructorUsedError;
   Continent? get region => throw _privateConstructorUsedError;
   String? get city => throw _privateConstructorUsedError;
   String? get postal => throw _privateConstructorUsedError;
@@ -674,7 +674,7 @@ abstract class $LocationCopyWith<$Res> {
   @useResult
   $Res call(
       {Continent? continent,
-      CountryFromIP? countryFromIP,
+      Country? countryFromIP,
       Continent? region,
       String? city,
       String? postal,
@@ -683,7 +683,7 @@ abstract class $LocationCopyWith<$Res> {
       bool? inEu});
 
   $ContinentCopyWith<$Res>? get continent;
-  $CountryFromIPCopyWith<$Res>? get countryFromIP;
+  $CountryCopyWith<$Res>? get countryFromIP;
   $ContinentCopyWith<$Res>? get region;
 }
 
@@ -717,7 +717,7 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
       countryFromIP: freezed == countryFromIP
           ? _value.countryFromIP
           : countryFromIP // ignore: cast_nullable_to_non_nullable
-              as CountryFromIP?,
+              as Country?,
       region: freezed == region
           ? _value.region
           : region // ignore: cast_nullable_to_non_nullable
@@ -759,12 +759,12 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
 
   @override
   @pragma('vm:prefer-inline')
-  $CountryFromIPCopyWith<$Res>? get countryFromIP {
+  $CountryCopyWith<$Res>? get countryFromIP {
     if (_value.countryFromIP == null) {
       return null;
     }
 
-    return $CountryFromIPCopyWith<$Res>(_value.countryFromIP!, (value) {
+    return $CountryCopyWith<$Res>(_value.countryFromIP!, (value) {
       return _then(_value.copyWith(countryFromIP: value) as $Val);
     });
   }
@@ -791,7 +791,7 @@ abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
   @useResult
   $Res call(
       {Continent? continent,
-      CountryFromIP? countryFromIP,
+      Country? countryFromIP,
       Continent? region,
       String? city,
       String? postal,
@@ -802,7 +802,7 @@ abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
   @override
   $ContinentCopyWith<$Res>? get continent;
   @override
-  $CountryFromIPCopyWith<$Res>? get countryFromIP;
+  $CountryCopyWith<$Res>? get countryFromIP;
   @override
   $ContinentCopyWith<$Res>? get region;
 }
@@ -835,7 +835,7 @@ class __$$_LocationCopyWithImpl<$Res>
       countryFromIP: freezed == countryFromIP
           ? _value.countryFromIP
           : countryFromIP // ignore: cast_nullable_to_non_nullable
-              as CountryFromIP?,
+              as Country?,
       region: freezed == region
           ? _value.region
           : region // ignore: cast_nullable_to_non_nullable
@@ -883,7 +883,7 @@ class _$_Location implements _Location {
   @override
   final Continent? continent;
   @override
-  final CountryFromIP? countryFromIP;
+  final Country? countryFromIP;
   @override
   final Continent? region;
   @override
@@ -943,7 +943,7 @@ class _$_Location implements _Location {
 abstract class _Location implements Location {
   const factory _Location(
       {required final Continent? continent,
-      required final CountryFromIP? countryFromIP,
+      required final Country? countryFromIP,
       required final Continent? region,
       required final String? city,
       required final String? postal,
@@ -956,7 +956,7 @@ abstract class _Location implements Location {
   @override
   Continent? get continent;
   @override
-  CountryFromIP? get countryFromIP;
+  Country? get countryFromIP;
   @override
   Continent? get region;
   @override
@@ -1127,12 +1127,12 @@ abstract class _Continent implements Continent {
       throw _privateConstructorUsedError;
 }
 
-CountryFromIP _$CountryFromIPFromJson(Map<String, dynamic> json) {
-  return _CountryFromIP.fromJson(json);
+Country _$CountryFromJson(Map<String, dynamic> json) {
+  return _Country.fromJson(json);
 }
 
 /// @nodoc
-mixin _$CountryFromIP {
+mixin _$Country {
   int? get area => throw _privateConstructorUsedError;
   List<String?>? get borders => throw _privateConstructorUsedError;
   String? get callingCode => throw _privateConstructorUsedError;
@@ -1146,15 +1146,13 @@ mixin _$CountryFromIP {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CountryFromIPCopyWith<CountryFromIP> get copyWith =>
-      throw _privateConstructorUsedError;
+  $CountryCopyWith<Country> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $CountryFromIPCopyWith<$Res> {
-  factory $CountryFromIPCopyWith(
-          CountryFromIP value, $Res Function(CountryFromIP) then) =
-      _$CountryFromIPCopyWithImpl<$Res, CountryFromIP>;
+abstract class $CountryCopyWith<$Res> {
+  factory $CountryCopyWith(Country value, $Res Function(Country) then) =
+      _$CountryCopyWithImpl<$Res, Country>;
   @useResult
   $Res call(
       {int? area,
@@ -1172,9 +1170,9 @@ abstract class $CountryFromIPCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CountryFromIPCopyWithImpl<$Res, $Val extends CountryFromIP>
-    implements $CountryFromIPCopyWith<$Res> {
-  _$CountryFromIPCopyWithImpl(this._value, this._then);
+class _$CountryCopyWithImpl<$Res, $Val extends Country>
+    implements $CountryCopyWith<$Res> {
+  _$CountryCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -1249,11 +1247,10 @@ class _$CountryFromIPCopyWithImpl<$Res, $Val extends CountryFromIP>
 }
 
 /// @nodoc
-abstract class _$$_CountryFromIPCopyWith<$Res>
-    implements $CountryFromIPCopyWith<$Res> {
-  factory _$$_CountryFromIPCopyWith(
-          _$_CountryFromIP value, $Res Function(_$_CountryFromIP) then) =
-      __$$_CountryFromIPCopyWithImpl<$Res>;
+abstract class _$$_CountryCopyWith<$Res> implements $CountryCopyWith<$Res> {
+  factory _$$_CountryCopyWith(
+          _$_Country value, $Res Function(_$_Country) then) =
+      __$$_CountryCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1273,11 +1270,10 @@ abstract class _$$_CountryFromIPCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CountryFromIPCopyWithImpl<$Res>
-    extends _$CountryFromIPCopyWithImpl<$Res, _$_CountryFromIP>
-    implements _$$_CountryFromIPCopyWith<$Res> {
-  __$$_CountryFromIPCopyWithImpl(
-      _$_CountryFromIP _value, $Res Function(_$_CountryFromIP) _then)
+class __$$_CountryCopyWithImpl<$Res>
+    extends _$CountryCopyWithImpl<$Res, _$_Country>
+    implements _$$_CountryCopyWith<$Res> {
+  __$$_CountryCopyWithImpl(_$_Country _value, $Res Function(_$_Country) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1294,7 +1290,7 @@ class __$$_CountryFromIPCopyWithImpl<$Res>
     Object? flag = null,
     Object? tld = freezed,
   }) {
-    return _then(_$_CountryFromIP(
+    return _then(_$_Country(
       area: freezed == area
           ? _value.area
           : area // ignore: cast_nullable_to_non_nullable
@@ -1341,8 +1337,8 @@ class __$$_CountryFromIPCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CountryFromIP implements _CountryFromIP {
-  const _$_CountryFromIP(
+class _$_Country implements _Country {
+  const _$_Country(
       {required this.area,
       required final List<String?>? borders,
       required this.callingCode,
@@ -1355,8 +1351,8 @@ class _$_CountryFromIP implements _CountryFromIP {
       required this.tld})
       : _borders = borders;
 
-  factory _$_CountryFromIP.fromJson(Map<String, dynamic> json) =>
-      _$$_CountryFromIPFromJson(json);
+  factory _$_Country.fromJson(Map<String, dynamic> json) =>
+      _$$_CountryFromJson(json);
 
   @override
   final int? area;
@@ -1388,14 +1384,14 @@ class _$_CountryFromIP implements _CountryFromIP {
 
   @override
   String toString() {
-    return 'CountryFromIP(area: $area, borders: $borders, callingCode: $callingCode, capital: $capital, code: $code, name: $name, population: $population, populationDensity: $populationDensity, flag: $flag, tld: $tld)';
+    return 'Country(area: $area, borders: $borders, callingCode: $callingCode, capital: $capital, code: $code, name: $name, population: $population, populationDensity: $populationDensity, flag: $flag, tld: $tld)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CountryFromIP &&
+            other is _$_Country &&
             (identical(other.area, area) || other.area == area) &&
             const DeepCollectionEquality().equals(other._borders, _borders) &&
             (identical(other.callingCode, callingCode) ||
@@ -1429,19 +1425,19 @@ class _$_CountryFromIP implements _CountryFromIP {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CountryFromIPCopyWith<_$_CountryFromIP> get copyWith =>
-      __$$_CountryFromIPCopyWithImpl<_$_CountryFromIP>(this, _$identity);
+  _$$_CountryCopyWith<_$_Country> get copyWith =>
+      __$$_CountryCopyWithImpl<_$_Country>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CountryFromIPToJson(
+    return _$$_CountryToJson(
       this,
     );
   }
 }
 
-abstract class _CountryFromIP implements CountryFromIP {
-  const factory _CountryFromIP(
+abstract class _Country implements Country {
+  const factory _Country(
       {required final int? area,
       required final List<String?>? borders,
       required final String? callingCode,
@@ -1451,10 +1447,9 @@ abstract class _CountryFromIP implements CountryFromIP {
       required final int? population,
       required final double? populationDensity,
       required final Flag flag,
-      required final String? tld}) = _$_CountryFromIP;
+      required final String? tld}) = _$_Country;
 
-  factory _CountryFromIP.fromJson(Map<String, dynamic> json) =
-      _$_CountryFromIP.fromJson;
+  factory _Country.fromJson(Map<String, dynamic> json) = _$_Country.fromJson;
 
   @override
   int? get area;
@@ -1478,7 +1473,7 @@ abstract class _CountryFromIP implements CountryFromIP {
   String? get tld;
   @override
   @JsonKey(ignore: true)
-  _$$_CountryFromIPCopyWith<_$_CountryFromIP> get copyWith =>
+  _$$_CountryCopyWith<_$_Country> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

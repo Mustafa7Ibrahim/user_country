@@ -63,8 +63,7 @@ _$_Location _$$_LocationFromJson(Map<String, dynamic> json) => _$_Location(
           : Continent.fromJson(json['continent'] as Map<String, dynamic>?),
       countryFromIP: json['countryFromIP'] == null
           ? null
-          : CountryFromIP.fromJson(
-              json['countryFromIP'] as Map<String, dynamic>?),
+          : Country.fromJson(json['countryFromIP'] as Map<String, dynamic>?),
       region: json['region'] == null
           ? null
           : Continent.fromJson(json['region'] as Map<String, dynamic>?),
@@ -98,8 +97,7 @@ Map<String, dynamic> _$$_ContinentToJson(_$_Continent instance) =>
       'name': instance.name,
     };
 
-_$_CountryFromIP _$$_CountryFromIPFromJson(Map<String, dynamic> json) =>
-    _$_CountryFromIP(
+_$_Country _$$_CountryFromJson(Map<String, dynamic> json) => _$_Country(
       area: json['area'] as int?,
       borders: (json['borders'] as List<dynamic>?)
           ?.map((e) => e as String?)
@@ -114,7 +112,7 @@ _$_CountryFromIP _$$_CountryFromIPFromJson(Map<String, dynamic> json) =>
       tld: json['tld'] as String?,
     );
 
-Map<String, dynamic> _$$_CountryFromIPToJson(_$_CountryFromIP instance) =>
+Map<String, dynamic> _$$_CountryToJson(_$_Country instance) =>
     <String, dynamic>{
       'area': instance.area,
       'borders': instance.borders,

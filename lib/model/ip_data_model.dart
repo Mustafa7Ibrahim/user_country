@@ -45,7 +45,7 @@ class Connection with _$Connection {
 class Location with _$Location {
   const factory Location({
     required Continent? continent,
-    required CountryFromIP? countryFromIP,
+    required Country? countryFromIP,
     required Continent? region,
     required String? city,
     required String? postal,
@@ -70,8 +70,8 @@ class Continent with _$Continent {
 }
 
 @freezed
-class CountryFromIP with _$CountryFromIP {
-  const factory CountryFromIP({
+class Country with _$Country {
+  const factory Country({
     required int? area,
     required List<String?>? borders,
     required String? callingCode,
@@ -82,10 +82,10 @@ class CountryFromIP with _$CountryFromIP {
     required double? populationDensity,
     required Flag flag,
     required String? tld,
-  }) = _CountryFromIP;
+  }) = _Country;
 
-  factory CountryFromIP.fromJson(Map<String, dynamic>? json) =>
-      _$CountryFromIPFromJson(json ?? {});
+  factory Country.fromJson(Map<String, dynamic>? json) =>
+      _$CountryFromJson(json ?? {});
 }
 
 @freezed
