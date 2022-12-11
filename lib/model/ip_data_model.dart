@@ -5,9 +5,9 @@ part 'ip_data_model.g.dart';
 @freezed
 class IpData with _$IpData {
   const factory IpData({
-    required String ip,
-    required String type,
-    required dynamic hostname,
+    required String? ip,
+    required String? type,
+    required String? hostname,
     required Carrier carrier,
     required Company company,
     required Connection connection,
@@ -24,9 +24,9 @@ class IpData with _$IpData {
 @freezed
 class Carrier with _$Carrier {
   const factory Carrier({
-    required String name,
-    required String mcc,
-    required String mnc,
+    required String? name,
+    required String? mcc,
+    required String? mnc,
   }) = _Carrier;
 
   factory Carrier.fromJson(Map<String, dynamic> json) =>
@@ -36,9 +36,9 @@ class Carrier with _$Carrier {
 @freezed
 class Company with _$Company {
   const factory Company({
-    required String domain,
-    required String name,
-    required String type,
+    required String? domain,
+    required String? name,
+    required String? type,
   }) = _Company;
 
   factory Company.fromJson(Map<String, dynamic> json) =>
@@ -48,11 +48,11 @@ class Company with _$Company {
 @freezed
 class Connection with _$Connection {
   const factory Connection({
-    required int asn,
-    required String domain,
-    required String organization,
-    required String route,
-    required String type,
+    required int? asn,
+    required String? domain,
+    required String? organization,
+    required String? route,
+    required String? type,
   }) = _Connection;
 
   factory Connection.fromJson(Map<String, dynamic> json) =>
@@ -62,13 +62,13 @@ class Connection with _$Connection {
 @freezed
 class Currency with _$Currency {
   const factory Currency({
-    required String code,
-    required String name,
-    required String nameNative,
-    required String plural,
-    required String pluralNative,
-    required String symbol,
-    required String symbolNative,
+    required String? code,
+    required String? name,
+    required String? nameNative,
+    required String? plural,
+    required String? pluralNative,
+    required String? symbol,
+    required String? symbolNative,
     required Format format,
   }) = _Currency;
 
@@ -89,8 +89,8 @@ class Format with _$Format {
 @freezed
 class Tive with _$Tive {
   const factory Tive({
-    required String prefix,
-    required String suffix,
+    required String? prefix,
+    required String? suffix,
   }) = _Tive;
 
   factory Tive.fromJson(Map<String, dynamic> json) => _$TiveFromJson(json);
@@ -102,12 +102,12 @@ class Location with _$Location {
     required Continent continent,
     required CountryFromIP countryFromIP,
     required Continent region,
-    required String city,
-    required String postal,
-    required double latitude,
-    required double longitude,
+    required String? city,
+    required String? postal,
+    required double? latitude,
+    required double? longitude,
     required Language language,
-    required bool inEu,
+    required bool? inEu,
   }) = _Location;
 
   factory Location.fromJson(Map<String, dynamic> json) =>
@@ -117,8 +117,8 @@ class Location with _$Location {
 @freezed
 class Continent with _$Continent {
   const factory Continent({
-    required String code,
-    required String name,
+    required String? code,
+    required String? name,
   }) = _Continent;
 
   factory Continent.fromJson(Map<String, dynamic> json) =>
@@ -128,17 +128,17 @@ class Continent with _$Continent {
 @freezed
 class CountryFromIP with _$CountryFromIP {
   const factory CountryFromIP({
-    required int area,
-    required List<String> borders,
-    required String callingCode,
-    required String capital,
-    required String code,
-    required String name,
-    required int population,
-    required double populationDensity,
+    required int? area,
+    required List<String?> borders,
+    required String? callingCode,
+    required String? capital,
+    required String? code,
+    required String? name,
+    required int? population,
+    required double? populationDensity,
     required Flag flag,
     required List<Language> languages,
-    required String tld,
+    required String? tld,
   }) = _CountryFromIP;
 
   factory CountryFromIP.fromJson(Map<String, dynamic> json) =>
@@ -148,12 +148,12 @@ class CountryFromIP with _$CountryFromIP {
 @freezed
 class Flag with _$Flag {
   const factory Flag({
-    required String emoji,
-    required String emojiUnicode,
-    required String emojitwo,
-    required String noto,
-    required String twemoji,
-    required String wikimedia,
+    required String? emoji,
+    required String? emojiUnicode,
+    required String? emojitwo,
+    required String? noto,
+    required String? twemoji,
+    required String? wikimedia,
   }) = _Flag;
 
   factory Flag.fromJson(Map<String, dynamic> json) => _$FlagFromJson(json);
@@ -162,9 +162,9 @@ class Flag with _$Flag {
 @freezed
 class Language with _$Language {
   const factory Language({
-    required String code,
-    required String name,
-    required String native,
+    required String? code,
+    required String? name,
+    required String? native,
   }) = _Language;
 
   factory Language.fromJson(Map<String, dynamic> json) =>
@@ -174,12 +174,12 @@ class Language with _$Language {
 @freezed
 class TimeZone with _$TimeZone {
   const factory TimeZone({
-    required String id,
-    required String abbreviation,
+    required String? id,
+    required String? abbreviation,
     required DateTime currentTime,
-    required String name,
-    required int offset,
-    required bool inDaylightSaving,
+    required String? name,
+    required int? offset,
+    required bool? inDaylightSaving,
   }) = _TimeZone;
 
   factory TimeZone.fromJson(Map<String, dynamic> json) =>
@@ -189,11 +189,11 @@ class TimeZone with _$TimeZone {
 @freezed
 class UserAgent with _$UserAgent {
   const factory UserAgent({
-    required String header,
-    required String name,
-    required String type,
-    required String version,
-    required String versionMajor,
+    required String? header,
+    required String? name,
+    required String? type,
+    required String? version,
+    required String? versionMajor,
     required Device device,
     required Engine engine,
     required Engine os,
@@ -206,9 +206,9 @@ class UserAgent with _$UserAgent {
 @freezed
 class Device with _$Device {
   const factory Device({
-    required dynamic brand,
-    required String name,
-    required String type,
+    required String? brand,
+    required String? name,
+    required String? type,
   }) = _Device;
 
   factory Device.fromJson(Map<String, dynamic> json) => _$DeviceFromJson(json);
@@ -217,10 +217,10 @@ class Device with _$Device {
 @freezed
 class Engine with _$Engine {
   const factory Engine({
-    required String name,
-    required String type,
-    required String version,
-    required String versionMajor,
+    required String? name,
+    required String? type,
+    required String? version,
+    required String? versionMajor,
   }) = _Engine;
 
   factory Engine.fromJson(Map<String, dynamic> json) => _$EngineFromJson(json);
