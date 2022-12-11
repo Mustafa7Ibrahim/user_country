@@ -1,13 +1,12 @@
 import 'package:bloc/bloc.dart';
 import 'package:country_picker/country_picker.dart';
-import 'package:custom_dio/get_it.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:user_country/location/get_country_code_request.dart';
 import 'package:user_country/model/ip_data_model.dart';
 
+part 'user_location_bloc.freezed.dart';
 part 'user_location_event.dart';
 part 'user_location_state.dart';
-part 'user_location_bloc.freezed.dart';
 
 class UserLocationBloc extends Bloc<UserLocationEvent, UserLocationState> {
   final GetCountryCodeRequest location;
