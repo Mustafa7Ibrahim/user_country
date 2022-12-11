@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+
 part 'ip_data_model.freezed.dart';
 part 'ip_data_model.g.dart';
 
@@ -45,7 +46,7 @@ class Connection with _$Connection {
 class Location with _$Location {
   const factory Location({
     required Continent? continent,
-    required Country? countryFromIP,
+    required Country? country,
     required Continent? region,
     required String? city,
     required String? postal,

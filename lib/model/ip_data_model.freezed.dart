@@ -653,7 +653,7 @@ Location _$LocationFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Location {
   Continent? get continent => throw _privateConstructorUsedError;
-  Country? get countryFromIP => throw _privateConstructorUsedError;
+  Country? get country => throw _privateConstructorUsedError;
   Continent? get region => throw _privateConstructorUsedError;
   String? get city => throw _privateConstructorUsedError;
   String? get postal => throw _privateConstructorUsedError;
@@ -674,7 +674,7 @@ abstract class $LocationCopyWith<$Res> {
   @useResult
   $Res call(
       {Continent? continent,
-      Country? countryFromIP,
+      Country? country,
       Continent? region,
       String? city,
       String? postal,
@@ -683,7 +683,7 @@ abstract class $LocationCopyWith<$Res> {
       bool? inEu});
 
   $ContinentCopyWith<$Res>? get continent;
-  $CountryCopyWith<$Res>? get countryFromIP;
+  $CountryCopyWith<$Res>? get country;
   $ContinentCopyWith<$Res>? get region;
 }
 
@@ -701,7 +701,7 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
   @override
   $Res call({
     Object? continent = freezed,
-    Object? countryFromIP = freezed,
+    Object? country = freezed,
     Object? region = freezed,
     Object? city = freezed,
     Object? postal = freezed,
@@ -714,9 +714,9 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
           ? _value.continent
           : continent // ignore: cast_nullable_to_non_nullable
               as Continent?,
-      countryFromIP: freezed == countryFromIP
-          ? _value.countryFromIP
-          : countryFromIP // ignore: cast_nullable_to_non_nullable
+      country: freezed == country
+          ? _value.country
+          : country // ignore: cast_nullable_to_non_nullable
               as Country?,
       region: freezed == region
           ? _value.region
@@ -759,13 +759,13 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
 
   @override
   @pragma('vm:prefer-inline')
-  $CountryCopyWith<$Res>? get countryFromIP {
-    if (_value.countryFromIP == null) {
+  $CountryCopyWith<$Res>? get country {
+    if (_value.country == null) {
       return null;
     }
 
-    return $CountryCopyWith<$Res>(_value.countryFromIP!, (value) {
-      return _then(_value.copyWith(countryFromIP: value) as $Val);
+    return $CountryCopyWith<$Res>(_value.country!, (value) {
+      return _then(_value.copyWith(country: value) as $Val);
     });
   }
 
@@ -791,7 +791,7 @@ abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
   @useResult
   $Res call(
       {Continent? continent,
-      Country? countryFromIP,
+      Country? country,
       Continent? region,
       String? city,
       String? postal,
@@ -802,7 +802,7 @@ abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
   @override
   $ContinentCopyWith<$Res>? get continent;
   @override
-  $CountryCopyWith<$Res>? get countryFromIP;
+  $CountryCopyWith<$Res>? get country;
   @override
   $ContinentCopyWith<$Res>? get region;
 }
@@ -819,7 +819,7 @@ class __$$_LocationCopyWithImpl<$Res>
   @override
   $Res call({
     Object? continent = freezed,
-    Object? countryFromIP = freezed,
+    Object? country = freezed,
     Object? region = freezed,
     Object? city = freezed,
     Object? postal = freezed,
@@ -832,9 +832,9 @@ class __$$_LocationCopyWithImpl<$Res>
           ? _value.continent
           : continent // ignore: cast_nullable_to_non_nullable
               as Continent?,
-      countryFromIP: freezed == countryFromIP
-          ? _value.countryFromIP
-          : countryFromIP // ignore: cast_nullable_to_non_nullable
+      country: freezed == country
+          ? _value.country
+          : country // ignore: cast_nullable_to_non_nullable
               as Country?,
       region: freezed == region
           ? _value.region
@@ -869,7 +869,7 @@ class __$$_LocationCopyWithImpl<$Res>
 class _$_Location implements _Location {
   const _$_Location(
       {required this.continent,
-      required this.countryFromIP,
+      required this.country,
       required this.region,
       required this.city,
       required this.postal,
@@ -883,7 +883,7 @@ class _$_Location implements _Location {
   @override
   final Continent? continent;
   @override
-  final Country? countryFromIP;
+  final Country? country;
   @override
   final Continent? region;
   @override
@@ -899,7 +899,7 @@ class _$_Location implements _Location {
 
   @override
   String toString() {
-    return 'Location(continent: $continent, countryFromIP: $countryFromIP, region: $region, city: $city, postal: $postal, latitude: $latitude, longitude: $longitude, inEu: $inEu)';
+    return 'Location(continent: $continent, country: $country, region: $region, city: $city, postal: $postal, latitude: $latitude, longitude: $longitude, inEu: $inEu)';
   }
 
   @override
@@ -909,8 +909,7 @@ class _$_Location implements _Location {
             other is _$_Location &&
             (identical(other.continent, continent) ||
                 other.continent == continent) &&
-            (identical(other.countryFromIP, countryFromIP) ||
-                other.countryFromIP == countryFromIP) &&
+            (identical(other.country, country) || other.country == country) &&
             (identical(other.region, region) || other.region == region) &&
             (identical(other.city, city) || other.city == city) &&
             (identical(other.postal, postal) || other.postal == postal) &&
@@ -923,8 +922,8 @@ class _$_Location implements _Location {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, continent, countryFromIP, region,
-      city, postal, latitude, longitude, inEu);
+  int get hashCode => Object.hash(runtimeType, continent, country, region, city,
+      postal, latitude, longitude, inEu);
 
   @JsonKey(ignore: true)
   @override
@@ -943,7 +942,7 @@ class _$_Location implements _Location {
 abstract class _Location implements Location {
   const factory _Location(
       {required final Continent? continent,
-      required final Country? countryFromIP,
+      required final Country? country,
       required final Continent? region,
       required final String? city,
       required final String? postal,
@@ -956,7 +955,7 @@ abstract class _Location implements Location {
   @override
   Continent? get continent;
   @override
-  Country? get countryFromIP;
+  Country? get country;
   @override
   Continent? get region;
   @override
