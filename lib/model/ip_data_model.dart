@@ -16,7 +16,8 @@ class IpData with _$IpData {
     required TimeZone timeZone,
   }) = _IpData;
 
-  factory IpData.fromJson(Map<String, dynamic> json) => _$IpDataFromJson(json);
+  factory IpData.fromJson(Map<String, dynamic>? json) =>
+      _$IpDataFromJson(json ?? {});
 }
 
 @freezed
@@ -27,8 +28,8 @@ class Carrier with _$Carrier {
     required String? mnc,
   }) = _Carrier;
 
-  factory Carrier.fromJson(Map<String, dynamic> json) =>
-      _$CarrierFromJson(json);
+  factory Carrier.fromJson(Map<String, dynamic>? json) =>
+      _$CarrierFromJson(json ?? {});
 }
 
 @freezed
@@ -39,8 +40,8 @@ class Company with _$Company {
     required String? type,
   }) = _Company;
 
-  factory Company.fromJson(Map<String, dynamic> json) =>
-      _$CompanyFromJson(json);
+  factory Company.fromJson(Map<String, dynamic>? json) =>
+      _$CompanyFromJson(json ?? {});
 }
 
 @freezed
@@ -53,8 +54,8 @@ class Connection with _$Connection {
     required String? type,
   }) = _Connection;
 
-  factory Connection.fromJson(Map<String, dynamic> json) =>
-      _$ConnectionFromJson(json);
+  factory Connection.fromJson(Map<String, dynamic>? json) =>
+      _$ConnectionFromJson(json ?? {});
 }
 
 @freezed
@@ -70,8 +71,8 @@ class Currency with _$Currency {
     required Format format,
   }) = _Currency;
 
-  factory Currency.fromJson(Map<String, dynamic> json) =>
-      _$CurrencyFromJson(json);
+  factory Currency.fromJson(Map<String, dynamic>? json) =>
+      _$CurrencyFromJson(json ?? {});
 }
 
 @freezed
@@ -81,7 +82,8 @@ class Format with _$Format {
     required Tive positive,
   }) = _Format;
 
-  factory Format.fromJson(Map<String, dynamic> json) => _$FormatFromJson(json);
+  factory Format.fromJson(Map<String, dynamic>? json) =>
+      _$FormatFromJson(json ?? {});
 }
 
 @freezed
@@ -91,7 +93,8 @@ class Tive with _$Tive {
     required String? suffix,
   }) = _Tive;
 
-  factory Tive.fromJson(Map<String, dynamic> json) => _$TiveFromJson(json);
+  factory Tive.fromJson(Map<String, dynamic>? json) =>
+      _$TiveFromJson(json ?? {});
 }
 
 @freezed
@@ -108,8 +111,8 @@ class Location with _$Location {
     required bool? inEu,
   }) = _Location;
 
-  factory Location.fromJson(Map<String, dynamic> json) =>
-      _$LocationFromJson(json);
+  factory Location.fromJson(Map<String, dynamic>? json) =>
+      _$LocationFromJson(json ?? {});
 }
 
 @freezed
@@ -119,8 +122,8 @@ class Continent with _$Continent {
     required String? name,
   }) = _Continent;
 
-  factory Continent.fromJson(Map<String, dynamic> json) =>
-      _$ContinentFromJson(json);
+  factory Continent.fromJson(Map<String, dynamic>? json) =>
+      _$ContinentFromJson(json ?? {});
 }
 
 @freezed
@@ -139,8 +142,8 @@ class CountryFromIP with _$CountryFromIP {
     required String? tld,
   }) = _CountryFromIP;
 
-  factory CountryFromIP.fromJson(Map<String, dynamic> json) =>
-      _$CountryFromIPFromJson(json);
+  factory CountryFromIP.fromJson(Map<String, dynamic>? json) =>
+      _$CountryFromIPFromJson(json ?? {});
 }
 
 @freezed
@@ -154,7 +157,8 @@ class Flag with _$Flag {
     required String? wikimedia,
   }) = _Flag;
 
-  factory Flag.fromJson(Map<String, dynamic> json) => _$FlagFromJson(json);
+  factory Flag.fromJson(Map<String, dynamic>? json) =>
+      _$FlagFromJson(json ?? {});
 }
 
 @freezed
@@ -165,8 +169,8 @@ class Language with _$Language {
     required String? native,
   }) = _Language;
 
-  factory Language.fromJson(Map<String, dynamic> json) =>
-      _$LanguageFromJson(json);
+  factory Language.fromJson(Map<String, dynamic>? json) =>
+      _$LanguageFromJson(json ?? {});
 }
 
 @freezed
@@ -180,7 +184,6 @@ class TimeZone with _$TimeZone {
     required bool? inDaylightSaving,
   }) = _TimeZone;
 
-  factory TimeZone.fromJson(Map<String, dynamic> json) =>
-      _$TimeZoneFromJson(json);
+  factory TimeZone.fromJson(Map<String, dynamic>? json) =>
+      _$TimeZoneFromJson(json ?? {});
 }
-
