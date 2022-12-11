@@ -11,7 +11,8 @@ class GetCountryCodeRequest {
     try {
       CustomDio("https://api.ipregistry.co");
       final response = await _dioHelper.get("/?key=tryout");
-      return response.data;
+      final ipData = IpData.fromJson(response.data);
+      return ipData;
     } catch (e) {
       throw Exception(e);
     }
