@@ -14,7 +14,7 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-IpData _$IpDataFromJson(Map<String, dynamic> json) {
+IpData _$IpDataFromJson(Map<String, dynamic>? json) {
   return _IpData.fromJson(json);
 }
 
@@ -32,7 +32,7 @@ mixin _$IpData {
   TimeZone get timeZone => throw _privateConstructorUsedError;
   UserAgent get userAgent => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic>? toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $IpDataCopyWith<IpData> get copyWith => throw _privateConstructorUsedError;
 }
@@ -317,7 +317,7 @@ class _$_IpData implements _IpData {
       required this.userAgent})
       : _security = security;
 
-  factory _$_IpData.fromJson(Map<String, dynamic> json) =>
+  factory _$_IpData.fromJson(Map<String, dynamic>? json) =>
       _$$_IpDataFromJson(json);
 
   @override
@@ -402,7 +402,7 @@ class _$_IpData implements _IpData {
       __$$_IpDataCopyWithImpl<_$_IpData>(this, _$identity);
 
   @override
-  Map<String, dynamic> toJson() {
+  Map<String, dynamic>? toJson() {
     return _$$_IpDataToJson(
       this,
     );
@@ -423,7 +423,7 @@ abstract class _IpData implements IpData {
       required final TimeZone timeZone,
       required final UserAgent userAgent}) = _$_IpData;
 
-  factory _IpData.fromJson(Map<String, dynamic> json) = _$_IpData.fromJson;
+  factory _IpData.fromJson(Map<String, dynamic>? json) = _$_IpData.fromJson;
 
   @override
   String? get ip;
@@ -453,7 +453,7 @@ abstract class _IpData implements IpData {
       throw _privateConstructorUsedError;
 }
 
-Carrier _$CarrierFromJson(Map<String, dynamic> json) {
+Carrier _$CarrierFromJson(Map<String, dynamic>? json) {
   return _Carrier.fromJson(json);
 }
 
@@ -463,7 +463,7 @@ mixin _$Carrier {
   String? get mcc => throw _privateConstructorUsedError;
   String? get mnc => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic>? toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CarrierCopyWith<Carrier> get copyWith => throw _privateConstructorUsedError;
 }
@@ -556,7 +556,7 @@ class __$$_CarrierCopyWithImpl<$Res>
 class _$_Carrier implements _Carrier {
   const _$_Carrier({required this.name, required this.mcc, required this.mnc});
 
-  factory _$_Carrier.fromJson(Map<String, dynamic> json) =>
+  factory _$_Carrier.fromJson(Map<String, dynamic>? json) =>
       _$$_CarrierFromJson(json);
 
   @override
@@ -592,7 +592,7 @@ class _$_Carrier implements _Carrier {
       __$$_CarrierCopyWithImpl<_$_Carrier>(this, _$identity);
 
   @override
-  Map<String, dynamic> toJson() {
+  Map<String, dynamic>? toJson() {
     return _$$_CarrierToJson(
       this,
     );
@@ -605,7 +605,7 @@ abstract class _Carrier implements Carrier {
       required final String? mcc,
       required final String? mnc}) = _$_Carrier;
 
-  factory _Carrier.fromJson(Map<String, dynamic> json) = _$_Carrier.fromJson;
+  factory _Carrier.fromJson(Map<String, dynamic>? json) = _$_Carrier.fromJson;
 
   @override
   String? get name;
@@ -619,7 +619,7 @@ abstract class _Carrier implements Carrier {
       throw _privateConstructorUsedError;
 }
 
-Company _$CompanyFromJson(Map<String, dynamic> json) {
+Company _$CompanyFromJson(Map<String, dynamic>? json) {
   return _Company.fromJson(json);
 }
 
@@ -629,7 +629,7 @@ mixin _$Company {
   String? get name => throw _privateConstructorUsedError;
   String? get type => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic>? toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CompanyCopyWith<Company> get copyWith => throw _privateConstructorUsedError;
 }
@@ -723,7 +723,7 @@ class _$_Company implements _Company {
   const _$_Company(
       {required this.domain, required this.name, required this.type});
 
-  factory _$_Company.fromJson(Map<String, dynamic> json) =>
+  factory _$_Company.fromJson(Map<String, dynamic>? json) =>
       _$$_CompanyFromJson(json);
 
   @override
@@ -759,7 +759,7 @@ class _$_Company implements _Company {
       __$$_CompanyCopyWithImpl<_$_Company>(this, _$identity);
 
   @override
-  Map<String, dynamic> toJson() {
+  Map<String, dynamic>? toJson() {
     return _$$_CompanyToJson(
       this,
     );
@@ -772,7 +772,7 @@ abstract class _Company implements Company {
       required final String? name,
       required final String? type}) = _$_Company;
 
-  factory _Company.fromJson(Map<String, dynamic> json) = _$_Company.fromJson;
+  factory _Company.fromJson(Map<String, dynamic>? json) = _$_Company.fromJson;
 
   @override
   String? get domain;
@@ -786,7 +786,7 @@ abstract class _Company implements Company {
       throw _privateConstructorUsedError;
 }
 
-Connection _$ConnectionFromJson(Map<String, dynamic> json) {
+Connection _$ConnectionFromJson(Map<String, dynamic>? json) {
   return _Connection.fromJson(json);
 }
 
@@ -798,7 +798,7 @@ mixin _$Connection {
   String? get route => throw _privateConstructorUsedError;
   String? get type => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic>? toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $ConnectionCopyWith<Connection> get copyWith =>
       throw _privateConstructorUsedError;
@@ -930,7 +930,7 @@ class _$_Connection implements _Connection {
       required this.route,
       required this.type});
 
-  factory _$_Connection.fromJson(Map<String, dynamic> json) =>
+  factory _$_Connection.fromJson(Map<String, dynamic>? json) =>
       _$$_ConnectionFromJson(json);
 
   @override
@@ -974,7 +974,7 @@ class _$_Connection implements _Connection {
       __$$_ConnectionCopyWithImpl<_$_Connection>(this, _$identity);
 
   @override
-  Map<String, dynamic> toJson() {
+  Map<String, dynamic>? toJson() {
     return _$$_ConnectionToJson(
       this,
     );
@@ -989,7 +989,7 @@ abstract class _Connection implements Connection {
       required final String? route,
       required final String? type}) = _$_Connection;
 
-  factory _Connection.fromJson(Map<String, dynamic> json) =
+  factory _Connection.fromJson(Map<String, dynamic>? json) =
       _$_Connection.fromJson;
 
   @override
@@ -1008,7 +1008,7 @@ abstract class _Connection implements Connection {
       throw _privateConstructorUsedError;
 }
 
-Currency _$CurrencyFromJson(Map<String, dynamic> json) {
+Currency _$CurrencyFromJson(Map<String, dynamic>? json) {
   return _Currency.fromJson(json);
 }
 
@@ -1023,7 +1023,7 @@ mixin _$Currency {
   String? get symbolNative => throw _privateConstructorUsedError;
   Format get format => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic>? toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CurrencyCopyWith<Currency> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1205,7 +1205,7 @@ class _$_Currency implements _Currency {
       required this.symbolNative,
       required this.format});
 
-  factory _$_Currency.fromJson(Map<String, dynamic> json) =>
+  factory _$_Currency.fromJson(Map<String, dynamic>? json) =>
       _$$_CurrencyFromJson(json);
 
   @override
@@ -1260,7 +1260,7 @@ class _$_Currency implements _Currency {
       __$$_CurrencyCopyWithImpl<_$_Currency>(this, _$identity);
 
   @override
-  Map<String, dynamic> toJson() {
+  Map<String, dynamic>? toJson() {
     return _$$_CurrencyToJson(
       this,
     );
@@ -1278,7 +1278,7 @@ abstract class _Currency implements Currency {
       required final String? symbolNative,
       required final Format format}) = _$_Currency;
 
-  factory _Currency.fromJson(Map<String, dynamic> json) = _$_Currency.fromJson;
+  factory _Currency.fromJson(Map<String, dynamic>? json) = _$_Currency.fromJson;
 
   @override
   String? get code;
@@ -1302,7 +1302,7 @@ abstract class _Currency implements Currency {
       throw _privateConstructorUsedError;
 }
 
-Format _$FormatFromJson(Map<String, dynamic> json) {
+Format _$FormatFromJson(Map<String, dynamic>? json) {
   return _Format.fromJson(json);
 }
 
@@ -1311,7 +1311,7 @@ mixin _$Format {
   Tive get negative => throw _privateConstructorUsedError;
   Tive get positive => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic>? toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $FormatCopyWith<Format> get copyWith => throw _privateConstructorUsedError;
 }
@@ -1417,7 +1417,7 @@ class __$$_FormatCopyWithImpl<$Res>
 class _$_Format implements _Format {
   const _$_Format({required this.negative, required this.positive});
 
-  factory _$_Format.fromJson(Map<String, dynamic> json) =>
+  factory _$_Format.fromJson(Map<String, dynamic>? json) =>
       _$$_FormatFromJson(json);
 
   @override
@@ -1452,7 +1452,7 @@ class _$_Format implements _Format {
       __$$_FormatCopyWithImpl<_$_Format>(this, _$identity);
 
   @override
-  Map<String, dynamic> toJson() {
+  Map<String, dynamic>? toJson() {
     return _$$_FormatToJson(
       this,
     );
@@ -1463,7 +1463,7 @@ abstract class _Format implements Format {
   const factory _Format(
       {required final Tive negative, required final Tive positive}) = _$_Format;
 
-  factory _Format.fromJson(Map<String, dynamic> json) = _$_Format.fromJson;
+  factory _Format.fromJson(Map<String, dynamic>? json) = _$_Format.fromJson;
 
   @override
   Tive get negative;
@@ -1475,7 +1475,7 @@ abstract class _Format implements Format {
       throw _privateConstructorUsedError;
 }
 
-Tive _$TiveFromJson(Map<String, dynamic> json) {
+Tive _$TiveFromJson(Map<String, dynamic>? json) {
   return _Tive.fromJson(json);
 }
 
@@ -1484,7 +1484,7 @@ mixin _$Tive {
   String? get prefix => throw _privateConstructorUsedError;
   String? get suffix => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic>? toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $TiveCopyWith<Tive> get copyWith => throw _privateConstructorUsedError;
 }
@@ -1565,7 +1565,7 @@ class __$$_TiveCopyWithImpl<$Res> extends _$TiveCopyWithImpl<$Res, _$_Tive>
 class _$_Tive implements _Tive {
   const _$_Tive({required this.prefix, required this.suffix});
 
-  factory _$_Tive.fromJson(Map<String, dynamic> json) => _$$_TiveFromJson(json);
+  factory _$_Tive.fromJson(Map<String, dynamic>? json) => _$$_TiveFromJson(json);
 
   @override
   final String? prefix;
@@ -1597,7 +1597,7 @@ class _$_Tive implements _Tive {
       __$$_TiveCopyWithImpl<_$_Tive>(this, _$identity);
 
   @override
-  Map<String, dynamic> toJson() {
+  Map<String, dynamic>? toJson() {
     return _$$_TiveToJson(
       this,
     );
@@ -1608,7 +1608,7 @@ abstract class _Tive implements Tive {
   const factory _Tive(
       {required final String? prefix, required final String? suffix}) = _$_Tive;
 
-  factory _Tive.fromJson(Map<String, dynamic> json) = _$_Tive.fromJson;
+  factory _Tive.fromJson(Map<String, dynamic>? json) = _$_Tive.fromJson;
 
   @override
   String? get prefix;
@@ -1619,7 +1619,7 @@ abstract class _Tive implements Tive {
   _$$_TiveCopyWith<_$_Tive> get copyWith => throw _privateConstructorUsedError;
 }
 
-Location _$LocationFromJson(Map<String, dynamic> json) {
+Location _$LocationFromJson(Map<String, dynamic>? json) {
   return _Location.fromJson(json);
 }
 
@@ -1635,7 +1635,7 @@ mixin _$Location {
   Language get language => throw _privateConstructorUsedError;
   bool? get inEu => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic>? toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $LocationCopyWith<Location> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1863,7 +1863,7 @@ class _$_Location implements _Location {
       required this.language,
       required this.inEu});
 
-  factory _$_Location.fromJson(Map<String, dynamic> json) =>
+  factory _$_Location.fromJson(Map<String, dynamic>? json) =>
       _$$_LocationFromJson(json);
 
   @override
@@ -1923,7 +1923,7 @@ class _$_Location implements _Location {
       __$$_LocationCopyWithImpl<_$_Location>(this, _$identity);
 
   @override
-  Map<String, dynamic> toJson() {
+  Map<String, dynamic>? toJson() {
     return _$$_LocationToJson(
       this,
     );
@@ -1942,7 +1942,7 @@ abstract class _Location implements Location {
       required final Language language,
       required final bool? inEu}) = _$_Location;
 
-  factory _Location.fromJson(Map<String, dynamic> json) = _$_Location.fromJson;
+  factory _Location.fromJson(Map<String, dynamic>? json) = _$_Location.fromJson;
 
   @override
   Continent get continent;
@@ -1968,7 +1968,7 @@ abstract class _Location implements Location {
       throw _privateConstructorUsedError;
 }
 
-Continent _$ContinentFromJson(Map<String, dynamic> json) {
+Continent _$ContinentFromJson(Map<String, dynamic>? json) {
   return _Continent.fromJson(json);
 }
 
@@ -1977,7 +1977,7 @@ mixin _$Continent {
   String? get code => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic>? toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $ContinentCopyWith<Continent> get copyWith =>
       throw _privateConstructorUsedError;
@@ -2062,7 +2062,7 @@ class __$$_ContinentCopyWithImpl<$Res>
 class _$_Continent implements _Continent {
   const _$_Continent({required this.code, required this.name});
 
-  factory _$_Continent.fromJson(Map<String, dynamic> json) =>
+  factory _$_Continent.fromJson(Map<String, dynamic>? json) =>
       _$$_ContinentFromJson(json);
 
   @override
@@ -2095,7 +2095,7 @@ class _$_Continent implements _Continent {
       __$$_ContinentCopyWithImpl<_$_Continent>(this, _$identity);
 
   @override
-  Map<String, dynamic> toJson() {
+  Map<String, dynamic>? toJson() {
     return _$$_ContinentToJson(
       this,
     );
@@ -2107,7 +2107,7 @@ abstract class _Continent implements Continent {
       {required final String? code,
       required final String? name}) = _$_Continent;
 
-  factory _Continent.fromJson(Map<String, dynamic> json) =
+  factory _Continent.fromJson(Map<String, dynamic>? json) =
       _$_Continent.fromJson;
 
   @override
@@ -2120,7 +2120,7 @@ abstract class _Continent implements Continent {
       throw _privateConstructorUsedError;
 }
 
-CountryFromIP _$CountryFromIPFromJson(Map<String, dynamic> json) {
+CountryFromIP _$CountryFromIPFromJson(Map<String, dynamic>? json) {
   return _CountryFromIP.fromJson(json);
 }
 
@@ -2138,7 +2138,7 @@ mixin _$CountryFromIP {
   List<Language> get languages => throw _privateConstructorUsedError;
   String? get tld => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic>? toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CountryFromIPCopyWith<CountryFromIP> get copyWith =>
       throw _privateConstructorUsedError;
@@ -2363,7 +2363,7 @@ class _$_CountryFromIP implements _CountryFromIP {
       : _borders = borders,
         _languages = languages;
 
-  factory _$_CountryFromIP.fromJson(Map<String, dynamic> json) =>
+  factory _$_CountryFromIP.fromJson(Map<String, dynamic>? json) =>
       _$$_CountryFromIPFromJson(json);
 
   @override
@@ -2449,7 +2449,7 @@ class _$_CountryFromIP implements _CountryFromIP {
       __$$_CountryFromIPCopyWithImpl<_$_CountryFromIP>(this, _$identity);
 
   @override
-  Map<String, dynamic> toJson() {
+  Map<String, dynamic>? toJson() {
     return _$$_CountryFromIPToJson(
       this,
     );
@@ -2470,7 +2470,7 @@ abstract class _CountryFromIP implements CountryFromIP {
       required final List<Language> languages,
       required final String? tld}) = _$_CountryFromIP;
 
-  factory _CountryFromIP.fromJson(Map<String, dynamic> json) =
+  factory _CountryFromIP.fromJson(Map<String, dynamic>? json) =
       _$_CountryFromIP.fromJson;
 
   @override
@@ -2501,7 +2501,7 @@ abstract class _CountryFromIP implements CountryFromIP {
       throw _privateConstructorUsedError;
 }
 
-Flag _$FlagFromJson(Map<String, dynamic> json) {
+Flag _$FlagFromJson(Map<String, dynamic>? json) {
   return _Flag.fromJson(json);
 }
 
@@ -2514,7 +2514,7 @@ mixin _$Flag {
   String? get twemoji => throw _privateConstructorUsedError;
   String? get wikimedia => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic>? toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $FlagCopyWith<Flag> get copyWith => throw _privateConstructorUsedError;
 }
@@ -2653,7 +2653,7 @@ class _$_Flag implements _Flag {
       required this.twemoji,
       required this.wikimedia});
 
-  factory _$_Flag.fromJson(Map<String, dynamic> json) => _$$_FlagFromJson(json);
+  factory _$_Flag.fromJson(Map<String, dynamic>? json) => _$$_FlagFromJson(json);
 
   @override
   final String? emoji;
@@ -2701,7 +2701,7 @@ class _$_Flag implements _Flag {
       __$$_FlagCopyWithImpl<_$_Flag>(this, _$identity);
 
   @override
-  Map<String, dynamic> toJson() {
+  Map<String, dynamic>? toJson() {
     return _$$_FlagToJson(
       this,
     );
@@ -2717,7 +2717,7 @@ abstract class _Flag implements Flag {
       required final String? twemoji,
       required final String? wikimedia}) = _$_Flag;
 
-  factory _Flag.fromJson(Map<String, dynamic> json) = _$_Flag.fromJson;
+  factory _Flag.fromJson(Map<String, dynamic>? json) = _$_Flag.fromJson;
 
   @override
   String? get emoji;
@@ -2736,7 +2736,7 @@ abstract class _Flag implements Flag {
   _$$_FlagCopyWith<_$_Flag> get copyWith => throw _privateConstructorUsedError;
 }
 
-Language _$LanguageFromJson(Map<String, dynamic> json) {
+Language _$LanguageFromJson(Map<String, dynamic>? json) {
   return _Language.fromJson(json);
 }
 
@@ -2746,7 +2746,7 @@ mixin _$Language {
   String? get name => throw _privateConstructorUsedError;
   String? get native => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic>? toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $LanguageCopyWith<Language> get copyWith =>
       throw _privateConstructorUsedError;
@@ -2842,7 +2842,7 @@ class _$_Language implements _Language {
   const _$_Language(
       {required this.code, required this.name, required this.native});
 
-  factory _$_Language.fromJson(Map<String, dynamic> json) =>
+  factory _$_Language.fromJson(Map<String, dynamic>? json) =>
       _$$_LanguageFromJson(json);
 
   @override
@@ -2878,7 +2878,7 @@ class _$_Language implements _Language {
       __$$_LanguageCopyWithImpl<_$_Language>(this, _$identity);
 
   @override
-  Map<String, dynamic> toJson() {
+  Map<String, dynamic>? toJson() {
     return _$$_LanguageToJson(
       this,
     );
@@ -2891,7 +2891,7 @@ abstract class _Language implements Language {
       required final String? name,
       required final String? native}) = _$_Language;
 
-  factory _Language.fromJson(Map<String, dynamic> json) = _$_Language.fromJson;
+  factory _Language.fromJson(Map<String, dynamic>? json) = _$_Language.fromJson;
 
   @override
   String? get code;
@@ -2905,7 +2905,7 @@ abstract class _Language implements Language {
       throw _privateConstructorUsedError;
 }
 
-TimeZone _$TimeZoneFromJson(Map<String, dynamic> json) {
+TimeZone _$TimeZoneFromJson(Map<String, dynamic>? json) {
   return _TimeZone.fromJson(json);
 }
 
@@ -2918,7 +2918,7 @@ mixin _$TimeZone {
   int? get offset => throw _privateConstructorUsedError;
   bool? get inDaylightSaving => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic>? toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $TimeZoneCopyWith<TimeZone> get copyWith =>
       throw _privateConstructorUsedError;
@@ -3061,7 +3061,7 @@ class _$_TimeZone implements _TimeZone {
       required this.offset,
       required this.inDaylightSaving});
 
-  factory _$_TimeZone.fromJson(Map<String, dynamic> json) =>
+  factory _$_TimeZone.fromJson(Map<String, dynamic>? json) =>
       _$$_TimeZoneFromJson(json);
 
   @override
@@ -3110,7 +3110,7 @@ class _$_TimeZone implements _TimeZone {
       __$$_TimeZoneCopyWithImpl<_$_TimeZone>(this, _$identity);
 
   @override
-  Map<String, dynamic> toJson() {
+  Map<String, dynamic>? toJson() {
     return _$$_TimeZoneToJson(
       this,
     );
@@ -3126,7 +3126,7 @@ abstract class _TimeZone implements TimeZone {
       required final int? offset,
       required final bool? inDaylightSaving}) = _$_TimeZone;
 
-  factory _TimeZone.fromJson(Map<String, dynamic> json) = _$_TimeZone.fromJson;
+  factory _TimeZone.fromJson(Map<String, dynamic>? json) = _$_TimeZone.fromJson;
 
   @override
   String? get id;
@@ -3146,7 +3146,7 @@ abstract class _TimeZone implements TimeZone {
       throw _privateConstructorUsedError;
 }
 
-UserAgent _$UserAgentFromJson(Map<String, dynamic> json) {
+UserAgent _$UserAgentFromJson(Map<String, dynamic>? json) {
   return _UserAgent.fromJson(json);
 }
 
@@ -3161,7 +3161,7 @@ mixin _$UserAgent {
   Engine get engine => throw _privateConstructorUsedError;
   Engine get os => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic>? toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $UserAgentCopyWith<UserAgent> get copyWith =>
       throw _privateConstructorUsedError;
@@ -3365,7 +3365,7 @@ class _$_UserAgent implements _UserAgent {
       required this.engine,
       required this.os});
 
-  factory _$_UserAgent.fromJson(Map<String, dynamic> json) =>
+  factory _$_UserAgent.fromJson(Map<String, dynamic>? json) =>
       _$$_UserAgentFromJson(json);
 
   @override
@@ -3418,7 +3418,7 @@ class _$_UserAgent implements _UserAgent {
       __$$_UserAgentCopyWithImpl<_$_UserAgent>(this, _$identity);
 
   @override
-  Map<String, dynamic> toJson() {
+  Map<String, dynamic>? toJson() {
     return _$$_UserAgentToJson(
       this,
     );
@@ -3436,7 +3436,7 @@ abstract class _UserAgent implements UserAgent {
       required final Engine engine,
       required final Engine os}) = _$_UserAgent;
 
-  factory _UserAgent.fromJson(Map<String, dynamic> json) =
+  factory _UserAgent.fromJson(Map<String, dynamic>? json) =
       _$_UserAgent.fromJson;
 
   @override
@@ -3461,7 +3461,7 @@ abstract class _UserAgent implements UserAgent {
       throw _privateConstructorUsedError;
 }
 
-Device _$DeviceFromJson(Map<String, dynamic> json) {
+Device _$DeviceFromJson(Map<String, dynamic>? json) {
   return _Device.fromJson(json);
 }
 
@@ -3471,7 +3471,7 @@ mixin _$Device {
   String? get name => throw _privateConstructorUsedError;
   String? get type => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic>? toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $DeviceCopyWith<Device> get copyWith => throw _privateConstructorUsedError;
 }
@@ -3564,7 +3564,7 @@ class _$_Device implements _Device {
   const _$_Device(
       {required this.brand, required this.name, required this.type});
 
-  factory _$_Device.fromJson(Map<String, dynamic> json) =>
+  factory _$_Device.fromJson(Map<String, dynamic>? json) =>
       _$$_DeviceFromJson(json);
 
   @override
@@ -3600,7 +3600,7 @@ class _$_Device implements _Device {
       __$$_DeviceCopyWithImpl<_$_Device>(this, _$identity);
 
   @override
-  Map<String, dynamic> toJson() {
+  Map<String, dynamic>? toJson() {
     return _$$_DeviceToJson(
       this,
     );
@@ -3613,7 +3613,7 @@ abstract class _Device implements Device {
       required final String? name,
       required final String? type}) = _$_Device;
 
-  factory _Device.fromJson(Map<String, dynamic> json) = _$_Device.fromJson;
+  factory _Device.fromJson(Map<String, dynamic>? json) = _$_Device.fromJson;
 
   @override
   String? get brand;
@@ -3627,7 +3627,7 @@ abstract class _Device implements Device {
       throw _privateConstructorUsedError;
 }
 
-Engine _$EngineFromJson(Map<String, dynamic> json) {
+Engine _$EngineFromJson(Map<String, dynamic>? json) {
   return _Engine.fromJson(json);
 }
 
@@ -3638,7 +3638,7 @@ mixin _$Engine {
   String? get version => throw _privateConstructorUsedError;
   String? get versionMajor => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic>? toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $EngineCopyWith<Engine> get copyWith => throw _privateConstructorUsedError;
 }
@@ -3746,7 +3746,7 @@ class _$_Engine implements _Engine {
       required this.version,
       required this.versionMajor});
 
-  factory _$_Engine.fromJson(Map<String, dynamic> json) =>
+  factory _$_Engine.fromJson(Map<String, dynamic>? json) =>
       _$$_EngineFromJson(json);
 
   @override
@@ -3787,7 +3787,7 @@ class _$_Engine implements _Engine {
       __$$_EngineCopyWithImpl<_$_Engine>(this, _$identity);
 
   @override
-  Map<String, dynamic> toJson() {
+  Map<String, dynamic>? toJson() {
     return _$$_EngineToJson(
       this,
     );
@@ -3801,7 +3801,7 @@ abstract class _Engine implements Engine {
       required final String? version,
       required final String? versionMajor}) = _$_Engine;
 
-  factory _Engine.fromJson(Map<String, dynamic> json) = _$_Engine.fromJson;
+  factory _Engine.fromJson(Map<String, dynamic>? json) = _$_Engine.fromJson;
 
   @override
   String? get name;

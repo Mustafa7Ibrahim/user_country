@@ -10,17 +10,17 @@ _$_IpData _$$_IpDataFromJson(Map<String, dynamic> json) => _$_IpData(
       ip: json['ip'] as String?,
       type: json['type'] as String?,
       hostname: json['hostname'] as String?,
-      carrier: Carrier.fromJson(json['carrier'] as Map<String, dynamic>),
-      company: Company.fromJson(json['company'] as Map<String, dynamic>),
+      carrier: Carrier.fromJson(json['carrier'] as Map<String, dynamic>?),
+      company: Company.fromJson(json['company'] as Map<String, dynamic>?),
       connection:
-          Connection.fromJson(json['connection'] as Map<String, dynamic>),
-      currency: Currency.fromJson(json['currency'] as Map<String, dynamic>),
-      location: Location.fromJson(json['location'] as Map<String, dynamic>),
+          Connection.fromJson(json['connection'] as Map<String, dynamic>?),
+      currency: Currency.fromJson(json['currency'] as Map<String, dynamic>?),
+      location: Location.fromJson(json['location'] as Map<String, dynamic>?),
       security: (json['security'] as Map<String, dynamic>?)?.map(
         (k, e) => MapEntry(k, e as bool),
       ),
-      timeZone: TimeZone.fromJson(json['timeZone'] as Map<String, dynamic>),
-      userAgent: UserAgent.fromJson(json['userAgent'] as Map<String, dynamic>),
+      timeZone: TimeZone.fromJson(json['timeZone'] as Map<String, dynamic>?),
+      userAgent: UserAgent.fromJson(json['userAgent'] as Map<String, dynamic>?),
     );
 
 Map<String, dynamic> _$$_IpDataToJson(_$_IpData instance) => <String, dynamic>{
@@ -89,7 +89,7 @@ _$_Currency _$$_CurrencyFromJson(Map<String, dynamic> json) => _$_Currency(
       pluralNative: json['pluralNative'] as String?,
       symbol: json['symbol'] as String?,
       symbolNative: json['symbolNative'] as String?,
-      format: Format.fromJson(json['format'] as Map<String, dynamic>),
+      format: Format.fromJson(json['format'] as Map<String, dynamic>?),
     );
 
 Map<String, dynamic> _$$_CurrencyToJson(_$_Currency instance) =>
@@ -105,8 +105,8 @@ Map<String, dynamic> _$$_CurrencyToJson(_$_Currency instance) =>
     };
 
 _$_Format _$$_FormatFromJson(Map<String, dynamic> json) => _$_Format(
-      negative: Tive.fromJson(json['negative'] as Map<String, dynamic>),
-      positive: Tive.fromJson(json['positive'] as Map<String, dynamic>),
+      negative: Tive.fromJson(json['negative'] as Map<String, dynamic>?),
+      positive: Tive.fromJson(json['positive'] as Map<String, dynamic>?),
     );
 
 Map<String, dynamic> _$$_FormatToJson(_$_Format instance) => <String, dynamic>{
@@ -125,15 +125,15 @@ Map<String, dynamic> _$$_TiveToJson(_$_Tive instance) => <String, dynamic>{
     };
 
 _$_Location _$$_LocationFromJson(Map<String, dynamic> json) => _$_Location(
-      continent: Continent.fromJson(json['continent'] as Map<String, dynamic>),
-      countryFromIP:
-          CountryFromIP.fromJson(json['countryFromIP'] as Map<String, dynamic>),
-      region: Continent.fromJson(json['region'] as Map<String, dynamic>),
+      continent: Continent.fromJson(json['continent'] as Map<String, dynamic>?),
+      countryFromIP: CountryFromIP.fromJson(
+          json['countryFromIP'] as Map<String, dynamic>?),
+      region: Continent.fromJson(json['region'] as Map<String, dynamic>?),
       city: json['city'] as String?,
       postal: json['postal'] as String?,
       latitude: (json['latitude'] as num?)?.toDouble(),
       longitude: (json['longitude'] as num?)?.toDouble(),
-      language: Language.fromJson(json['language'] as Map<String, dynamic>),
+      language: Language.fromJson(json['language'] as Map<String, dynamic>?),
       inEu: json['inEu'] as bool?,
     );
 
@@ -172,9 +172,9 @@ _$_CountryFromIP _$$_CountryFromIPFromJson(Map<String, dynamic> json) =>
       name: json['name'] as String?,
       population: json['population'] as int?,
       populationDensity: (json['populationDensity'] as num?)?.toDouble(),
-      flag: Flag.fromJson(json['flag'] as Map<String, dynamic>),
+      flag: Flag.fromJson(json['flag'] as Map<String, dynamic>?),
       languages: (json['languages'] as List<dynamic>)
-          .map((e) => Language.fromJson(e as Map<String, dynamic>))
+          .map((e) => Language.fromJson(e as Map<String, dynamic>?))
           .toList(),
       tld: json['tld'] as String?,
     );
@@ -250,9 +250,9 @@ _$_UserAgent _$$_UserAgentFromJson(Map<String, dynamic> json) => _$_UserAgent(
       type: json['type'] as String?,
       version: json['version'] as String?,
       versionMajor: json['versionMajor'] as String?,
-      device: Device.fromJson(json['device'] as Map<String, dynamic>),
-      engine: Engine.fromJson(json['engine'] as Map<String, dynamic>),
-      os: Engine.fromJson(json['os'] as Map<String, dynamic>),
+      device: Device.fromJson(json['device'] as Map<String, dynamic>?),
+      engine: Engine.fromJson(json['engine'] as Map<String, dynamic>?),
+      os: Engine.fromJson(json['os'] as Map<String, dynamic>?),
     );
 
 Map<String, dynamic> _$$_UserAgentToJson(_$_UserAgent instance) =>
