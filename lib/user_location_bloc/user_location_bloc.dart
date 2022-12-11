@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:bloc/bloc.dart';
 import 'package:country_picker/country_picker.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -17,8 +19,12 @@ class UserLocationBloc extends Bloc<UserLocationEvent, UserLocationState> {
           started: (value) async {
             emit(const _Loading());
             final IpData ipData = await location.getCountryCode();
+            log(ipData.toJson().toString());
+            log(ipData.location!.countryFromIP!.code.toString());
+
             final country =
-                Country.parse(ipData.location!.countryFromIP!.code!);
+                Country.parse(ipData.location?.countryFromIP?.code ?? "");
+            log(country.toString());
             emit(_Loaded(country));
           },
           update: (value) {
