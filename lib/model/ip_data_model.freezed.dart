@@ -28,7 +28,7 @@ mixin _$IpData {
   Connection get connection => throw _privateConstructorUsedError;
   Currency get currency => throw _privateConstructorUsedError;
   Location get location => throw _privateConstructorUsedError;
-  Map<String, bool> get security => throw _privateConstructorUsedError;
+  Map<String, bool>? get security => throw _privateConstructorUsedError;
   TimeZone get timeZone => throw _privateConstructorUsedError;
   UserAgent get userAgent => throw _privateConstructorUsedError;
 
@@ -51,7 +51,7 @@ abstract class $IpDataCopyWith<$Res> {
       Connection connection,
       Currency currency,
       Location location,
-      Map<String, bool> security,
+      Map<String, bool>? security,
       TimeZone timeZone,
       UserAgent userAgent});
 
@@ -85,7 +85,7 @@ class _$IpDataCopyWithImpl<$Res, $Val extends IpData>
     Object? connection = null,
     Object? currency = null,
     Object? location = null,
-    Object? security = null,
+    Object? security = freezed,
     Object? timeZone = null,
     Object? userAgent = null,
   }) {
@@ -122,10 +122,10 @@ class _$IpDataCopyWithImpl<$Res, $Val extends IpData>
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
               as Location,
-      security: null == security
+      security: freezed == security
           ? _value.security
           : security // ignore: cast_nullable_to_non_nullable
-              as Map<String, bool>,
+              as Map<String, bool>?,
       timeZone: null == timeZone
           ? _value.timeZone
           : timeZone // ignore: cast_nullable_to_non_nullable
@@ -209,7 +209,7 @@ abstract class _$$_IpDataCopyWith<$Res> implements $IpDataCopyWith<$Res> {
       Connection connection,
       Currency currency,
       Location location,
-      Map<String, bool> security,
+      Map<String, bool>? security,
       TimeZone timeZone,
       UserAgent userAgent});
 
@@ -247,7 +247,7 @@ class __$$_IpDataCopyWithImpl<$Res>
     Object? connection = null,
     Object? currency = null,
     Object? location = null,
-    Object? security = null,
+    Object? security = freezed,
     Object? timeZone = null,
     Object? userAgent = null,
   }) {
@@ -284,10 +284,10 @@ class __$$_IpDataCopyWithImpl<$Res>
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
               as Location,
-      security: null == security
+      security: freezed == security
           ? _value._security
           : security // ignore: cast_nullable_to_non_nullable
-              as Map<String, bool>,
+              as Map<String, bool>?,
       timeZone: null == timeZone
           ? _value.timeZone
           : timeZone // ignore: cast_nullable_to_non_nullable
@@ -312,7 +312,7 @@ class _$_IpData implements _IpData {
       required this.connection,
       required this.currency,
       required this.location,
-      required final Map<String, bool> security,
+      required final Map<String, bool>? security,
       required this.timeZone,
       required this.userAgent})
       : _security = security;
@@ -336,11 +336,13 @@ class _$_IpData implements _IpData {
   final Currency currency;
   @override
   final Location location;
-  final Map<String, bool> _security;
+  final Map<String, bool>? _security;
   @override
-  Map<String, bool> get security {
+  Map<String, bool>? get security {
+    final value = _security;
+    if (value == null) return null;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(_security);
+    return EqualUnmodifiableMapView(value);
   }
 
   @override
@@ -417,7 +419,7 @@ abstract class _IpData implements IpData {
       required final Connection connection,
       required final Currency currency,
       required final Location location,
-      required final Map<String, bool> security,
+      required final Map<String, bool>? security,
       required final TimeZone timeZone,
       required final UserAgent userAgent}) = _$_IpData;
 
@@ -440,7 +442,7 @@ abstract class _IpData implements IpData {
   @override
   Location get location;
   @override
-  Map<String, bool> get security;
+  Map<String, bool>? get security;
   @override
   TimeZone get timeZone;
   @override

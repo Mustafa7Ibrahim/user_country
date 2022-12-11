@@ -16,7 +16,9 @@ _$_IpData _$$_IpDataFromJson(Map<String, dynamic> json) => _$_IpData(
           Connection.fromJson(json['connection'] as Map<String, dynamic>),
       currency: Currency.fromJson(json['currency'] as Map<String, dynamic>),
       location: Location.fromJson(json['location'] as Map<String, dynamic>),
-      security: Map<String, bool>.from(json['security'] as Map),
+      security: (json['security'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(k, e as bool),
+      ),
       timeZone: TimeZone.fromJson(json['timeZone'] as Map<String, dynamic>),
       userAgent: UserAgent.fromJson(json['userAgent'] as Map<String, dynamic>),
     );

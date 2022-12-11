@@ -13,7 +13,7 @@ class IpData with _$IpData {
     required Connection connection,
     required Currency currency,
     required Location location,
-    required Map<String, bool> security,
+    required Map<String, bool>? security,
     required TimeZone timeZone,
     required UserAgent userAgent,
   }) = _IpData;
