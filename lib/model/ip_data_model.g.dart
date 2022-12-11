@@ -16,7 +16,6 @@ _$_IpData _$$_IpDataFromJson(Map<String, dynamic> json) => _$_IpData(
           Connection.fromJson(json['connection'] as Map<String, dynamic>?),
       currency: Currency.fromJson(json['currency'] as Map<String, dynamic>?),
       location: Location.fromJson(json['location'] as Map<String, dynamic>?),
-      timeZone: TimeZone.fromJson(json['timeZone'] as Map<String, dynamic>?),
     );
 
 Map<String, dynamic> _$$_IpDataToJson(_$_IpData instance) => <String, dynamic>{
@@ -28,7 +27,6 @@ Map<String, dynamic> _$$_IpDataToJson(_$_IpData instance) => <String, dynamic>{
       'connection': instance.connection,
       'currency': instance.currency,
       'location': instance.location,
-      'timeZone': instance.timeZone,
     };
 
 _$_Carrier _$$_CarrierFromJson(Map<String, dynamic> json) => _$_Carrier(
@@ -127,7 +125,6 @@ _$_Location _$$_LocationFromJson(Map<String, dynamic> json) => _$_Location(
       postal: json['postal'] as String?,
       latitude: (json['latitude'] as num?)?.toDouble(),
       longitude: (json['longitude'] as num?)?.toDouble(),
-      language: Language.fromJson(json['language'] as Map<String, dynamic>?),
       inEu: json['inEu'] as bool?,
     );
 
@@ -140,7 +137,6 @@ Map<String, dynamic> _$$_LocationToJson(_$_Location instance) =>
       'postal': instance.postal,
       'latitude': instance.latitude,
       'longitude': instance.longitude,
-      'language': instance.language,
       'inEu': instance.inEu,
     };
 
@@ -167,9 +163,6 @@ _$_CountryFromIP _$$_CountryFromIPFromJson(Map<String, dynamic> json) =>
       population: json['population'] as int?,
       populationDensity: (json['populationDensity'] as num?)?.toDouble(),
       flag: Flag.fromJson(json['flag'] as Map<String, dynamic>?),
-      languages: (json['languages'] as List<dynamic>)
-          .map((e) => Language.fromJson(e as Map<String, dynamic>?))
-          .toList(),
       tld: json['tld'] as String?,
     );
 
@@ -184,7 +177,6 @@ Map<String, dynamic> _$$_CountryFromIPToJson(_$_CountryFromIP instance) =>
       'population': instance.population,
       'populationDensity': instance.populationDensity,
       'flag': instance.flag,
-      'languages': instance.languages,
       'tld': instance.tld,
     };
 
@@ -204,36 +196,4 @@ Map<String, dynamic> _$$_FlagToJson(_$_Flag instance) => <String, dynamic>{
       'noto': instance.noto,
       'twemoji': instance.twemoji,
       'wikimedia': instance.wikimedia,
-    };
-
-_$_Language _$$_LanguageFromJson(Map<String, dynamic> json) => _$_Language(
-      code: json['code'] as String?,
-      name: json['name'] as String?,
-      native: json['native'] as String?,
-    );
-
-Map<String, dynamic> _$$_LanguageToJson(_$_Language instance) =>
-    <String, dynamic>{
-      'code': instance.code,
-      'name': instance.name,
-      'native': instance.native,
-    };
-
-_$_TimeZone _$$_TimeZoneFromJson(Map<String, dynamic> json) => _$_TimeZone(
-      id: json['id'] as String?,
-      abbreviation: json['abbreviation'] as String?,
-      currentTime: DateTime.parse(json['currentTime'] as String),
-      name: json['name'] as String?,
-      offset: json['offset'] as int?,
-      inDaylightSaving: json['inDaylightSaving'] as bool?,
-    );
-
-Map<String, dynamic> _$$_TimeZoneToJson(_$_TimeZone instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'abbreviation': instance.abbreviation,
-      'currentTime': instance.currentTime.toIso8601String(),
-      'name': instance.name,
-      'offset': instance.offset,
-      'inDaylightSaving': instance.inDaylightSaving,
     };

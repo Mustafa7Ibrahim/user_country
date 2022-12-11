@@ -28,7 +28,6 @@ mixin _$IpData {
   Connection get connection => throw _privateConstructorUsedError;
   Currency get currency => throw _privateConstructorUsedError;
   Location get location => throw _privateConstructorUsedError;
-  TimeZone get timeZone => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -48,15 +47,13 @@ abstract class $IpDataCopyWith<$Res> {
       Company company,
       Connection connection,
       Currency currency,
-      Location location,
-      TimeZone timeZone});
+      Location location});
 
   $CarrierCopyWith<$Res> get carrier;
   $CompanyCopyWith<$Res> get company;
   $ConnectionCopyWith<$Res> get connection;
   $CurrencyCopyWith<$Res> get currency;
   $LocationCopyWith<$Res> get location;
-  $TimeZoneCopyWith<$Res> get timeZone;
 }
 
 /// @nodoc
@@ -80,7 +77,6 @@ class _$IpDataCopyWithImpl<$Res, $Val extends IpData>
     Object? connection = null,
     Object? currency = null,
     Object? location = null,
-    Object? timeZone = null,
   }) {
     return _then(_value.copyWith(
       ip: freezed == ip
@@ -115,10 +111,6 @@ class _$IpDataCopyWithImpl<$Res, $Val extends IpData>
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
               as Location,
-      timeZone: null == timeZone
-          ? _value.timeZone
-          : timeZone // ignore: cast_nullable_to_non_nullable
-              as TimeZone,
     ) as $Val);
   }
 
@@ -161,14 +153,6 @@ class _$IpDataCopyWithImpl<$Res, $Val extends IpData>
       return _then(_value.copyWith(location: value) as $Val);
     });
   }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $TimeZoneCopyWith<$Res> get timeZone {
-    return $TimeZoneCopyWith<$Res>(_value.timeZone, (value) {
-      return _then(_value.copyWith(timeZone: value) as $Val);
-    });
-  }
 }
 
 /// @nodoc
@@ -185,8 +169,7 @@ abstract class _$$_IpDataCopyWith<$Res> implements $IpDataCopyWith<$Res> {
       Company company,
       Connection connection,
       Currency currency,
-      Location location,
-      TimeZone timeZone});
+      Location location});
 
   @override
   $CarrierCopyWith<$Res> get carrier;
@@ -198,8 +181,6 @@ abstract class _$$_IpDataCopyWith<$Res> implements $IpDataCopyWith<$Res> {
   $CurrencyCopyWith<$Res> get currency;
   @override
   $LocationCopyWith<$Res> get location;
-  @override
-  $TimeZoneCopyWith<$Res> get timeZone;
 }
 
 /// @nodoc
@@ -220,7 +201,6 @@ class __$$_IpDataCopyWithImpl<$Res>
     Object? connection = null,
     Object? currency = null,
     Object? location = null,
-    Object? timeZone = null,
   }) {
     return _then(_$_IpData(
       ip: freezed == ip
@@ -255,10 +235,6 @@ class __$$_IpDataCopyWithImpl<$Res>
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
               as Location,
-      timeZone: null == timeZone
-          ? _value.timeZone
-          : timeZone // ignore: cast_nullable_to_non_nullable
-              as TimeZone,
     ));
   }
 }
@@ -274,8 +250,7 @@ class _$_IpData implements _IpData {
       required this.company,
       required this.connection,
       required this.currency,
-      required this.location,
-      required this.timeZone});
+      required this.location});
 
   factory _$_IpData.fromJson(Map<String, dynamic> json) =>
       _$$_IpDataFromJson(json);
@@ -296,12 +271,10 @@ class _$_IpData implements _IpData {
   final Currency currency;
   @override
   final Location location;
-  @override
-  final TimeZone timeZone;
 
   @override
   String toString() {
-    return 'IpData(ip: $ip, type: $type, hostname: $hostname, carrier: $carrier, company: $company, connection: $connection, currency: $currency, location: $location, timeZone: $timeZone)';
+    return 'IpData(ip: $ip, type: $type, hostname: $hostname, carrier: $carrier, company: $company, connection: $connection, currency: $currency, location: $location)';
   }
 
   @override
@@ -320,15 +293,13 @@ class _$_IpData implements _IpData {
             (identical(other.currency, currency) ||
                 other.currency == currency) &&
             (identical(other.location, location) ||
-                other.location == location) &&
-            (identical(other.timeZone, timeZone) ||
-                other.timeZone == timeZone));
+                other.location == location));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, ip, type, hostname, carrier,
-      company, connection, currency, location, timeZone);
+      company, connection, currency, location);
 
   @JsonKey(ignore: true)
   @override
@@ -353,8 +324,7 @@ abstract class _IpData implements IpData {
       required final Company company,
       required final Connection connection,
       required final Currency currency,
-      required final Location location,
-      required final TimeZone timeZone}) = _$_IpData;
+      required final Location location}) = _$_IpData;
 
   factory _IpData.fromJson(Map<String, dynamic> json) = _$_IpData.fromJson;
 
@@ -374,8 +344,6 @@ abstract class _IpData implements IpData {
   Currency get currency;
   @override
   Location get location;
-  @override
-  TimeZone get timeZone;
   @override
   @JsonKey(ignore: true)
   _$$_IpDataCopyWith<_$_IpData> get copyWith =>
@@ -1561,7 +1529,6 @@ mixin _$Location {
   String? get postal => throw _privateConstructorUsedError;
   double? get latitude => throw _privateConstructorUsedError;
   double? get longitude => throw _privateConstructorUsedError;
-  Language get language => throw _privateConstructorUsedError;
   bool? get inEu => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1583,13 +1550,11 @@ abstract class $LocationCopyWith<$Res> {
       String? postal,
       double? latitude,
       double? longitude,
-      Language language,
       bool? inEu});
 
   $ContinentCopyWith<$Res> get continent;
   $CountryFromIPCopyWith<$Res> get countryFromIP;
   $ContinentCopyWith<$Res> get region;
-  $LanguageCopyWith<$Res> get language;
 }
 
 /// @nodoc
@@ -1612,7 +1577,6 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
     Object? postal = freezed,
     Object? latitude = freezed,
     Object? longitude = freezed,
-    Object? language = null,
     Object? inEu = freezed,
   }) {
     return _then(_value.copyWith(
@@ -1644,10 +1608,6 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
           ? _value.longitude
           : longitude // ignore: cast_nullable_to_non_nullable
               as double?,
-      language: null == language
-          ? _value.language
-          : language // ignore: cast_nullable_to_non_nullable
-              as Language,
       inEu: freezed == inEu
           ? _value.inEu
           : inEu // ignore: cast_nullable_to_non_nullable
@@ -1678,14 +1638,6 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
       return _then(_value.copyWith(region: value) as $Val);
     });
   }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $LanguageCopyWith<$Res> get language {
-    return $LanguageCopyWith<$Res>(_value.language, (value) {
-      return _then(_value.copyWith(language: value) as $Val);
-    });
-  }
 }
 
 /// @nodoc
@@ -1703,7 +1655,6 @@ abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
       String? postal,
       double? latitude,
       double? longitude,
-      Language language,
       bool? inEu});
 
   @override
@@ -1712,8 +1663,6 @@ abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
   $CountryFromIPCopyWith<$Res> get countryFromIP;
   @override
   $ContinentCopyWith<$Res> get region;
-  @override
-  $LanguageCopyWith<$Res> get language;
 }
 
 /// @nodoc
@@ -1734,7 +1683,6 @@ class __$$_LocationCopyWithImpl<$Res>
     Object? postal = freezed,
     Object? latitude = freezed,
     Object? longitude = freezed,
-    Object? language = null,
     Object? inEu = freezed,
   }) {
     return _then(_$_Location(
@@ -1766,10 +1714,6 @@ class __$$_LocationCopyWithImpl<$Res>
           ? _value.longitude
           : longitude // ignore: cast_nullable_to_non_nullable
               as double?,
-      language: null == language
-          ? _value.language
-          : language // ignore: cast_nullable_to_non_nullable
-              as Language,
       inEu: freezed == inEu
           ? _value.inEu
           : inEu // ignore: cast_nullable_to_non_nullable
@@ -1789,7 +1733,6 @@ class _$_Location implements _Location {
       required this.postal,
       required this.latitude,
       required this.longitude,
-      required this.language,
       required this.inEu});
 
   factory _$_Location.fromJson(Map<String, dynamic> json) =>
@@ -1810,13 +1753,11 @@ class _$_Location implements _Location {
   @override
   final double? longitude;
   @override
-  final Language language;
-  @override
   final bool? inEu;
 
   @override
   String toString() {
-    return 'Location(continent: $continent, countryFromIP: $countryFromIP, region: $region, city: $city, postal: $postal, latitude: $latitude, longitude: $longitude, language: $language, inEu: $inEu)';
+    return 'Location(continent: $continent, countryFromIP: $countryFromIP, region: $region, city: $city, postal: $postal, latitude: $latitude, longitude: $longitude, inEu: $inEu)';
   }
 
   @override
@@ -1835,15 +1776,13 @@ class _$_Location implements _Location {
                 other.latitude == latitude) &&
             (identical(other.longitude, longitude) ||
                 other.longitude == longitude) &&
-            (identical(other.language, language) ||
-                other.language == language) &&
             (identical(other.inEu, inEu) || other.inEu == inEu));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, continent, countryFromIP, region,
-      city, postal, latitude, longitude, language, inEu);
+      city, postal, latitude, longitude, inEu);
 
   @JsonKey(ignore: true)
   @override
@@ -1868,7 +1807,6 @@ abstract class _Location implements Location {
       required final String? postal,
       required final double? latitude,
       required final double? longitude,
-      required final Language language,
       required final bool? inEu}) = _$_Location;
 
   factory _Location.fromJson(Map<String, dynamic> json) = _$_Location.fromJson;
@@ -1887,8 +1825,6 @@ abstract class _Location implements Location {
   double? get latitude;
   @override
   double? get longitude;
-  @override
-  Language get language;
   @override
   bool? get inEu;
   @override
@@ -2064,7 +2000,6 @@ mixin _$CountryFromIP {
   int? get population => throw _privateConstructorUsedError;
   double? get populationDensity => throw _privateConstructorUsedError;
   Flag get flag => throw _privateConstructorUsedError;
-  List<Language> get languages => throw _privateConstructorUsedError;
   String? get tld => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2089,7 +2024,6 @@ abstract class $CountryFromIPCopyWith<$Res> {
       int? population,
       double? populationDensity,
       Flag flag,
-      List<Language> languages,
       String? tld});
 
   $FlagCopyWith<$Res> get flag;
@@ -2117,7 +2051,6 @@ class _$CountryFromIPCopyWithImpl<$Res, $Val extends CountryFromIP>
     Object? population = freezed,
     Object? populationDensity = freezed,
     Object? flag = null,
-    Object? languages = null,
     Object? tld = freezed,
   }) {
     return _then(_value.copyWith(
@@ -2157,10 +2090,6 @@ class _$CountryFromIPCopyWithImpl<$Res, $Val extends CountryFromIP>
           ? _value.flag
           : flag // ignore: cast_nullable_to_non_nullable
               as Flag,
-      languages: null == languages
-          ? _value.languages
-          : languages // ignore: cast_nullable_to_non_nullable
-              as List<Language>,
       tld: freezed == tld
           ? _value.tld
           : tld // ignore: cast_nullable_to_non_nullable
@@ -2195,7 +2124,6 @@ abstract class _$$_CountryFromIPCopyWith<$Res>
       int? population,
       double? populationDensity,
       Flag flag,
-      List<Language> languages,
       String? tld});
 
   @override
@@ -2222,7 +2150,6 @@ class __$$_CountryFromIPCopyWithImpl<$Res>
     Object? population = freezed,
     Object? populationDensity = freezed,
     Object? flag = null,
-    Object? languages = null,
     Object? tld = freezed,
   }) {
     return _then(_$_CountryFromIP(
@@ -2262,10 +2189,6 @@ class __$$_CountryFromIPCopyWithImpl<$Res>
           ? _value.flag
           : flag // ignore: cast_nullable_to_non_nullable
               as Flag,
-      languages: null == languages
-          ? _value._languages
-          : languages // ignore: cast_nullable_to_non_nullable
-              as List<Language>,
       tld: freezed == tld
           ? _value.tld
           : tld // ignore: cast_nullable_to_non_nullable
@@ -2287,10 +2210,8 @@ class _$_CountryFromIP implements _CountryFromIP {
       required this.population,
       required this.populationDensity,
       required this.flag,
-      required final List<Language> languages,
       required this.tld})
-      : _borders = borders,
-        _languages = languages;
+      : _borders = borders;
 
   factory _$_CountryFromIP.fromJson(Map<String, dynamic> json) =>
       _$$_CountryFromIPFromJson(json);
@@ -2318,19 +2239,12 @@ class _$_CountryFromIP implements _CountryFromIP {
   final double? populationDensity;
   @override
   final Flag flag;
-  final List<Language> _languages;
-  @override
-  List<Language> get languages {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_languages);
-  }
-
   @override
   final String? tld;
 
   @override
   String toString() {
-    return 'CountryFromIP(area: $area, borders: $borders, callingCode: $callingCode, capital: $capital, code: $code, name: $name, population: $population, populationDensity: $populationDensity, flag: $flag, languages: $languages, tld: $tld)';
+    return 'CountryFromIP(area: $area, borders: $borders, callingCode: $callingCode, capital: $capital, code: $code, name: $name, population: $population, populationDensity: $populationDensity, flag: $flag, tld: $tld)';
   }
 
   @override
@@ -2350,8 +2264,6 @@ class _$_CountryFromIP implements _CountryFromIP {
             (identical(other.populationDensity, populationDensity) ||
                 other.populationDensity == populationDensity) &&
             (identical(other.flag, flag) || other.flag == flag) &&
-            const DeepCollectionEquality()
-                .equals(other._languages, _languages) &&
             (identical(other.tld, tld) || other.tld == tld));
   }
 
@@ -2368,7 +2280,6 @@ class _$_CountryFromIP implements _CountryFromIP {
       population,
       populationDensity,
       flag,
-      const DeepCollectionEquality().hash(_languages),
       tld);
 
   @JsonKey(ignore: true)
@@ -2396,7 +2307,6 @@ abstract class _CountryFromIP implements CountryFromIP {
       required final int? population,
       required final double? populationDensity,
       required final Flag flag,
-      required final List<Language> languages,
       required final String? tld}) = _$_CountryFromIP;
 
   factory _CountryFromIP.fromJson(Map<String, dynamic> json) =
@@ -2420,8 +2330,6 @@ abstract class _CountryFromIP implements CountryFromIP {
   double? get populationDensity;
   @override
   Flag get flag;
-  @override
-  List<Language> get languages;
   @override
   String? get tld;
   @override
@@ -2663,414 +2571,4 @@ abstract class _Flag implements Flag {
   @override
   @JsonKey(ignore: true)
   _$$_FlagCopyWith<_$_Flag> get copyWith => throw _privateConstructorUsedError;
-}
-
-Language _$LanguageFromJson(Map<String, dynamic> json) {
-  return _Language.fromJson(json);
-}
-
-/// @nodoc
-mixin _$Language {
-  String? get code => throw _privateConstructorUsedError;
-  String? get name => throw _privateConstructorUsedError;
-  String? get native => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $LanguageCopyWith<Language> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $LanguageCopyWith<$Res> {
-  factory $LanguageCopyWith(Language value, $Res Function(Language) then) =
-      _$LanguageCopyWithImpl<$Res, Language>;
-  @useResult
-  $Res call({String? code, String? name, String? native});
-}
-
-/// @nodoc
-class _$LanguageCopyWithImpl<$Res, $Val extends Language>
-    implements $LanguageCopyWith<$Res> {
-  _$LanguageCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? code = freezed,
-    Object? name = freezed,
-    Object? native = freezed,
-  }) {
-    return _then(_value.copyWith(
-      code: freezed == code
-          ? _value.code
-          : code // ignore: cast_nullable_to_non_nullable
-              as String?,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      native: freezed == native
-          ? _value.native
-          : native // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$_LanguageCopyWith<$Res> implements $LanguageCopyWith<$Res> {
-  factory _$$_LanguageCopyWith(
-          _$_Language value, $Res Function(_$_Language) then) =
-      __$$_LanguageCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String? code, String? name, String? native});
-}
-
-/// @nodoc
-class __$$_LanguageCopyWithImpl<$Res>
-    extends _$LanguageCopyWithImpl<$Res, _$_Language>
-    implements _$$_LanguageCopyWith<$Res> {
-  __$$_LanguageCopyWithImpl(
-      _$_Language _value, $Res Function(_$_Language) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? code = freezed,
-    Object? name = freezed,
-    Object? native = freezed,
-  }) {
-    return _then(_$_Language(
-      code: freezed == code
-          ? _value.code
-          : code // ignore: cast_nullable_to_non_nullable
-              as String?,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      native: freezed == native
-          ? _value.native
-          : native // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$_Language implements _Language {
-  const _$_Language(
-      {required this.code, required this.name, required this.native});
-
-  factory _$_Language.fromJson(Map<String, dynamic> json) =>
-      _$$_LanguageFromJson(json);
-
-  @override
-  final String? code;
-  @override
-  final String? name;
-  @override
-  final String? native;
-
-  @override
-  String toString() {
-    return 'Language(code: $code, name: $name, native: $native)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_Language &&
-            (identical(other.code, code) || other.code == code) &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.native, native) || other.native == native));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(runtimeType, code, name, native);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$_LanguageCopyWith<_$_Language> get copyWith =>
-      __$$_LanguageCopyWithImpl<_$_Language>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_LanguageToJson(
-      this,
-    );
-  }
-}
-
-abstract class _Language implements Language {
-  const factory _Language(
-      {required final String? code,
-      required final String? name,
-      required final String? native}) = _$_Language;
-
-  factory _Language.fromJson(Map<String, dynamic> json) = _$_Language.fromJson;
-
-  @override
-  String? get code;
-  @override
-  String? get name;
-  @override
-  String? get native;
-  @override
-  @JsonKey(ignore: true)
-  _$$_LanguageCopyWith<_$_Language> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-TimeZone _$TimeZoneFromJson(Map<String, dynamic> json) {
-  return _TimeZone.fromJson(json);
-}
-
-/// @nodoc
-mixin _$TimeZone {
-  String? get id => throw _privateConstructorUsedError;
-  String? get abbreviation => throw _privateConstructorUsedError;
-  DateTime get currentTime => throw _privateConstructorUsedError;
-  String? get name => throw _privateConstructorUsedError;
-  int? get offset => throw _privateConstructorUsedError;
-  bool? get inDaylightSaving => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $TimeZoneCopyWith<TimeZone> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $TimeZoneCopyWith<$Res> {
-  factory $TimeZoneCopyWith(TimeZone value, $Res Function(TimeZone) then) =
-      _$TimeZoneCopyWithImpl<$Res, TimeZone>;
-  @useResult
-  $Res call(
-      {String? id,
-      String? abbreviation,
-      DateTime currentTime,
-      String? name,
-      int? offset,
-      bool? inDaylightSaving});
-}
-
-/// @nodoc
-class _$TimeZoneCopyWithImpl<$Res, $Val extends TimeZone>
-    implements $TimeZoneCopyWith<$Res> {
-  _$TimeZoneCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? abbreviation = freezed,
-    Object? currentTime = null,
-    Object? name = freezed,
-    Object? offset = freezed,
-    Object? inDaylightSaving = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      abbreviation: freezed == abbreviation
-          ? _value.abbreviation
-          : abbreviation // ignore: cast_nullable_to_non_nullable
-              as String?,
-      currentTime: null == currentTime
-          ? _value.currentTime
-          : currentTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      offset: freezed == offset
-          ? _value.offset
-          : offset // ignore: cast_nullable_to_non_nullable
-              as int?,
-      inDaylightSaving: freezed == inDaylightSaving
-          ? _value.inDaylightSaving
-          : inDaylightSaving // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$_TimeZoneCopyWith<$Res> implements $TimeZoneCopyWith<$Res> {
-  factory _$$_TimeZoneCopyWith(
-          _$_TimeZone value, $Res Function(_$_TimeZone) then) =
-      __$$_TimeZoneCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String? id,
-      String? abbreviation,
-      DateTime currentTime,
-      String? name,
-      int? offset,
-      bool? inDaylightSaving});
-}
-
-/// @nodoc
-class __$$_TimeZoneCopyWithImpl<$Res>
-    extends _$TimeZoneCopyWithImpl<$Res, _$_TimeZone>
-    implements _$$_TimeZoneCopyWith<$Res> {
-  __$$_TimeZoneCopyWithImpl(
-      _$_TimeZone _value, $Res Function(_$_TimeZone) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? abbreviation = freezed,
-    Object? currentTime = null,
-    Object? name = freezed,
-    Object? offset = freezed,
-    Object? inDaylightSaving = freezed,
-  }) {
-    return _then(_$_TimeZone(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      abbreviation: freezed == abbreviation
-          ? _value.abbreviation
-          : abbreviation // ignore: cast_nullable_to_non_nullable
-              as String?,
-      currentTime: null == currentTime
-          ? _value.currentTime
-          : currentTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      offset: freezed == offset
-          ? _value.offset
-          : offset // ignore: cast_nullable_to_non_nullable
-              as int?,
-      inDaylightSaving: freezed == inDaylightSaving
-          ? _value.inDaylightSaving
-          : inDaylightSaving // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$_TimeZone implements _TimeZone {
-  const _$_TimeZone(
-      {required this.id,
-      required this.abbreviation,
-      required this.currentTime,
-      required this.name,
-      required this.offset,
-      required this.inDaylightSaving});
-
-  factory _$_TimeZone.fromJson(Map<String, dynamic> json) =>
-      _$$_TimeZoneFromJson(json);
-
-  @override
-  final String? id;
-  @override
-  final String? abbreviation;
-  @override
-  final DateTime currentTime;
-  @override
-  final String? name;
-  @override
-  final int? offset;
-  @override
-  final bool? inDaylightSaving;
-
-  @override
-  String toString() {
-    return 'TimeZone(id: $id, abbreviation: $abbreviation, currentTime: $currentTime, name: $name, offset: $offset, inDaylightSaving: $inDaylightSaving)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_TimeZone &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.abbreviation, abbreviation) ||
-                other.abbreviation == abbreviation) &&
-            (identical(other.currentTime, currentTime) ||
-                other.currentTime == currentTime) &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.offset, offset) || other.offset == offset) &&
-            (identical(other.inDaylightSaving, inDaylightSaving) ||
-                other.inDaylightSaving == inDaylightSaving));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(runtimeType, id, abbreviation, currentTime,
-      name, offset, inDaylightSaving);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$_TimeZoneCopyWith<_$_TimeZone> get copyWith =>
-      __$$_TimeZoneCopyWithImpl<_$_TimeZone>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_TimeZoneToJson(
-      this,
-    );
-  }
-}
-
-abstract class _TimeZone implements TimeZone {
-  const factory _TimeZone(
-      {required final String? id,
-      required final String? abbreviation,
-      required final DateTime currentTime,
-      required final String? name,
-      required final int? offset,
-      required final bool? inDaylightSaving}) = _$_TimeZone;
-
-  factory _TimeZone.fromJson(Map<String, dynamic> json) = _$_TimeZone.fromJson;
-
-  @override
-  String? get id;
-  @override
-  String? get abbreviation;
-  @override
-  DateTime get currentTime;
-  @override
-  String? get name;
-  @override
-  int? get offset;
-  @override
-  bool? get inDaylightSaving;
-  @override
-  @JsonKey(ignore: true)
-  _$$_TimeZoneCopyWith<_$_TimeZone> get copyWith =>
-      throw _privateConstructorUsedError;
 }

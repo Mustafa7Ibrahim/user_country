@@ -13,7 +13,6 @@ class IpData with _$IpData {
     required Connection connection,
     required Currency currency,
     required Location location,
-    required TimeZone timeZone,
   }) = _IpData;
 
   factory IpData.fromJson(Map<String, dynamic>? json) =>
@@ -107,7 +106,6 @@ class Location with _$Location {
     required String? postal,
     required double? latitude,
     required double? longitude,
-    required Language language,
     required bool? inEu,
   }) = _Location;
 
@@ -138,7 +136,6 @@ class CountryFromIP with _$CountryFromIP {
     required int? population,
     required double? populationDensity,
     required Flag flag,
-    required List<Language> languages,
     required String? tld,
   }) = _CountryFromIP;
 
@@ -161,29 +158,4 @@ class Flag with _$Flag {
       _$FlagFromJson(json ?? {});
 }
 
-@freezed
-class Language with _$Language {
-  const factory Language({
-    required String? code,
-    required String? name,
-    required String? native,
-  }) = _Language;
 
-  factory Language.fromJson(Map<String, dynamic>? json) =>
-      _$LanguageFromJson(json ?? {});
-}
-
-@freezed
-class TimeZone with _$TimeZone {
-  const factory TimeZone({
-    required String? id,
-    required String? abbreviation,
-    required DateTime currentTime,
-    required String? name,
-    required int? offset,
-    required bool? inDaylightSaving,
-  }) = _TimeZone;
-
-  factory TimeZone.fromJson(Map<String, dynamic>? json) =>
-      _$TimeZoneFromJson(json ?? {});
-}
