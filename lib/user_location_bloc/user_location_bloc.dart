@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:bloc/bloc.dart';
 import 'package:country_picker/country_picker.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -10,20 +8,17 @@ part 'user_location_bloc.freezed.dart';
 part 'user_location_event.dart';
 part 'user_location_state.dart';
 
-class UserLocationBloc extends Bloc<UserLocationEvent, UserLocationState> {
-  final GetCountryCodeRequest location;
-  UserLocationBloc(this.location) : super(const _Initial()) {
+class UserCountryBloc extends Bloc<UserLocationEvent, UserLocationState> {
+  late GetCountryCodeRequest location;
+  UserCountryBloc() : super(const _Initial()) {
+    location = GetCountryCodeRequest();
     on<UserLocationEvent>(
       (event, emit) async {
         await event.map(
           started: (value) async {
             emit(const _Loading());
             final i.IpData ipData = await location.getCountryCode();
-            log(ipData.toJson().toString());
-            log(ipData.location!.country!.code.toString());
-
             final Country c = Country.parse(ipData.location!.country!.code!);
-            log(c.toString());
             emit(_Loaded(c));
           },
           update: (value) {
