@@ -1,16 +1,15 @@
-import 'package:custom_dio/custom_dio.dart';
-import 'package:custom_dio/dio_helpers/dio_helper.dart';
+import 'package:dio/dio.dart';
 import 'package:user_country/model/ip_data_model.dart';
 
 class GetCountryCodeRequest {
-  final DioHelper _dioHelper;
+  final Dio _dioHelper;
 
   GetCountryCodeRequest(this._dioHelper);
 
   Future<IpData> getCountryCode() async {
     try {
-      CustomDio("https://api.ipregistry.co");
-      final response = await _dioHelper.get("/?key=tryout");
+      final response =
+          await _dioHelper.get("https://api.ipregistry.co/?key=tryout");
       final ipData = IpData.fromJson(response.data);
       return ipData;
     } catch (e) {
