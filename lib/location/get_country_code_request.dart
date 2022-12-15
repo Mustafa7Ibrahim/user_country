@@ -1,4 +1,7 @@
+import 'dart:ui';
+
 import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
 import 'package:user_country/model/ip_data_model.dart';
 
 const String _baseUrl = "https://api.ipregistry.co/?key=tryout";
@@ -13,13 +16,13 @@ class GetCountryCodeRequest {
     };
   }
 
-  Future<IpData> getCountryCode() async {
+  Future<IpData?> getCountryCode() async {
     try {
       final response = await _dioHelper.get(_baseUrl);
       final ipData = IpData.fromJson(response.data);
       return ipData;
     } catch (e) {
-      throw Exception(e);
+      return null;
     }
   }
 }

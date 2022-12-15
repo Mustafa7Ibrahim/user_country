@@ -1,5 +1,8 @@
+import 'dart:ui';
+
 import 'package:bloc/bloc.dart';
 import 'package:country_picker/country_picker.dart';
+import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:user_country/location/get_country_code_request.dart';
 import 'package:user_country/model/ip_data_model.dart' as i;
@@ -17,9 +20,14 @@ class UserCountryBloc extends Bloc<UserLocationEvent, UserLocationState> {
         await event.map(
           started: (value) async {
             emit(const _Loading());
-            final i.IpData ipData = await location.getCountryCode();
-            final Country c = Country.parse(ipData.location!.country!.code!);
-            emit(_Loaded(c));
+            final i.IpData? ipData = await location.getCountryCode();
+            if (ipData == null) {
+              final Country c = await getCountryFromLocal();
+              emit(_Loaded(c));
+            } else {
+              final Country c = Country.parse(ipData.location!.country!.code!);
+              emit(_Loaded(c));
+            }
           },
           update: (value) {
             emit(_Loaded(value.country));
@@ -28,4 +36,12 @@ class UserCountryBloc extends Bloc<UserLocationEvent, UserLocationState> {
       },
     );
   }
+}
+
+// get data from local when the api fails
+Future<Country> getCountryFromLocal() async {
+  final List<Locale> systemLocales = WidgetsBinding.instance.window.locales;
+  String? isoCountryCode = systemLocales.first.countryCode;
+  final Country c = Country.parse(isoCountryCode!);
+  return c;
 }
