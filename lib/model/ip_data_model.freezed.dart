@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'ip_data_model.dart';
 
@@ -653,7 +653,7 @@ Location _$LocationFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Location {
   Continent? get continent => throw _privateConstructorUsedError;
-  Country? get country => throw _privateConstructorUsedError;
+  CountryData? get country => throw _privateConstructorUsedError;
   Continent? get region => throw _privateConstructorUsedError;
   String? get city => throw _privateConstructorUsedError;
   String? get postal => throw _privateConstructorUsedError;
@@ -674,7 +674,7 @@ abstract class $LocationCopyWith<$Res> {
   @useResult
   $Res call(
       {Continent? continent,
-      Country? country,
+      CountryData? country,
       Continent? region,
       String? city,
       String? postal,
@@ -683,7 +683,7 @@ abstract class $LocationCopyWith<$Res> {
       bool? inEu});
 
   $ContinentCopyWith<$Res>? get continent;
-  $CountryCopyWith<$Res>? get country;
+  $CountryDataCopyWith<$Res>? get country;
   $ContinentCopyWith<$Res>? get region;
 }
 
@@ -717,7 +717,7 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
       country: freezed == country
           ? _value.country
           : country // ignore: cast_nullable_to_non_nullable
-              as Country?,
+              as CountryData?,
       region: freezed == region
           ? _value.region
           : region // ignore: cast_nullable_to_non_nullable
@@ -759,12 +759,12 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
 
   @override
   @pragma('vm:prefer-inline')
-  $CountryCopyWith<$Res>? get country {
+  $CountryDataCopyWith<$Res>? get country {
     if (_value.country == null) {
       return null;
     }
 
-    return $CountryCopyWith<$Res>(_value.country!, (value) {
+    return $CountryDataCopyWith<$Res>(_value.country!, (value) {
       return _then(_value.copyWith(country: value) as $Val);
     });
   }
@@ -791,7 +791,7 @@ abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
   @useResult
   $Res call(
       {Continent? continent,
-      Country? country,
+      CountryData? country,
       Continent? region,
       String? city,
       String? postal,
@@ -802,7 +802,7 @@ abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
   @override
   $ContinentCopyWith<$Res>? get continent;
   @override
-  $CountryCopyWith<$Res>? get country;
+  $CountryDataCopyWith<$Res>? get country;
   @override
   $ContinentCopyWith<$Res>? get region;
 }
@@ -835,7 +835,7 @@ class __$$_LocationCopyWithImpl<$Res>
       country: freezed == country
           ? _value.country
           : country // ignore: cast_nullable_to_non_nullable
-              as Country?,
+              as CountryData?,
       region: freezed == region
           ? _value.region
           : region // ignore: cast_nullable_to_non_nullable
@@ -883,7 +883,7 @@ class _$_Location implements _Location {
   @override
   final Continent? continent;
   @override
-  final Country? country;
+  final CountryData? country;
   @override
   final Continent? region;
   @override
@@ -942,7 +942,7 @@ class _$_Location implements _Location {
 abstract class _Location implements Location {
   const factory _Location(
       {required final Continent? continent,
-      required final Country? country,
+      required final CountryData? country,
       required final Continent? region,
       required final String? city,
       required final String? postal,
@@ -955,7 +955,7 @@ abstract class _Location implements Location {
   @override
   Continent? get continent;
   @override
-  Country? get country;
+  CountryData? get country;
   @override
   Continent? get region;
   @override
@@ -1126,12 +1126,12 @@ abstract class _Continent implements Continent {
       throw _privateConstructorUsedError;
 }
 
-Country _$CountryFromJson(Map<String, dynamic> json) {
-  return _Country.fromJson(json);
+CountryData _$CountryDataFromJson(Map<String, dynamic> json) {
+  return _CountryData.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Country {
+mixin _$CountryData {
   int? get area => throw _privateConstructorUsedError;
   List<String?>? get borders => throw _privateConstructorUsedError;
   String? get callingCode => throw _privateConstructorUsedError;
@@ -1145,13 +1145,15 @@ mixin _$Country {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CountryCopyWith<Country> get copyWith => throw _privateConstructorUsedError;
+  $CountryDataCopyWith<CountryData> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $CountryCopyWith<$Res> {
-  factory $CountryCopyWith(Country value, $Res Function(Country) then) =
-      _$CountryCopyWithImpl<$Res, Country>;
+abstract class $CountryDataCopyWith<$Res> {
+  factory $CountryDataCopyWith(
+          CountryData value, $Res Function(CountryData) then) =
+      _$CountryDataCopyWithImpl<$Res, CountryData>;
   @useResult
   $Res call(
       {int? area,
@@ -1169,9 +1171,9 @@ abstract class $CountryCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CountryCopyWithImpl<$Res, $Val extends Country>
-    implements $CountryCopyWith<$Res> {
-  _$CountryCopyWithImpl(this._value, this._then);
+class _$CountryDataCopyWithImpl<$Res, $Val extends CountryData>
+    implements $CountryDataCopyWith<$Res> {
+  _$CountryDataCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -1246,10 +1248,11 @@ class _$CountryCopyWithImpl<$Res, $Val extends Country>
 }
 
 /// @nodoc
-abstract class _$$_CountryCopyWith<$Res> implements $CountryCopyWith<$Res> {
-  factory _$$_CountryCopyWith(
-          _$_Country value, $Res Function(_$_Country) then) =
-      __$$_CountryCopyWithImpl<$Res>;
+abstract class _$$_CountryDataCopyWith<$Res>
+    implements $CountryDataCopyWith<$Res> {
+  factory _$$_CountryDataCopyWith(
+          _$_CountryData value, $Res Function(_$_CountryData) then) =
+      __$$_CountryDataCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1269,10 +1272,11 @@ abstract class _$$_CountryCopyWith<$Res> implements $CountryCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_CountryCopyWithImpl<$Res>
-    extends _$CountryCopyWithImpl<$Res, _$_Country>
-    implements _$$_CountryCopyWith<$Res> {
-  __$$_CountryCopyWithImpl(_$_Country _value, $Res Function(_$_Country) _then)
+class __$$_CountryDataCopyWithImpl<$Res>
+    extends _$CountryDataCopyWithImpl<$Res, _$_CountryData>
+    implements _$$_CountryDataCopyWith<$Res> {
+  __$$_CountryDataCopyWithImpl(
+      _$_CountryData _value, $Res Function(_$_CountryData) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1289,7 +1293,7 @@ class __$$_CountryCopyWithImpl<$Res>
     Object? flag = null,
     Object? tld = freezed,
   }) {
-    return _then(_$_Country(
+    return _then(_$_CountryData(
       area: freezed == area
           ? _value.area
           : area // ignore: cast_nullable_to_non_nullable
@@ -1336,8 +1340,8 @@ class __$$_CountryCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Country implements _Country {
-  const _$_Country(
+class _$_CountryData implements _CountryData {
+  const _$_CountryData(
       {required this.area,
       required final List<String?>? borders,
       required this.callingCode,
@@ -1350,8 +1354,8 @@ class _$_Country implements _Country {
       required this.tld})
       : _borders = borders;
 
-  factory _$_Country.fromJson(Map<String, dynamic> json) =>
-      _$$_CountryFromJson(json);
+  factory _$_CountryData.fromJson(Map<String, dynamic> json) =>
+      _$$_CountryDataFromJson(json);
 
   @override
   final int? area;
@@ -1360,6 +1364,7 @@ class _$_Country implements _Country {
   List<String?>? get borders {
     final value = _borders;
     if (value == null) return null;
+    if (_borders is EqualUnmodifiableListView) return _borders;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1383,14 +1388,14 @@ class _$_Country implements _Country {
 
   @override
   String toString() {
-    return 'Country(area: $area, borders: $borders, callingCode: $callingCode, capital: $capital, code: $code, name: $name, population: $population, populationDensity: $populationDensity, flag: $flag, tld: $tld)';
+    return 'CountryData(area: $area, borders: $borders, callingCode: $callingCode, capital: $capital, code: $code, name: $name, population: $population, populationDensity: $populationDensity, flag: $flag, tld: $tld)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Country &&
+            other is _$_CountryData &&
             (identical(other.area, area) || other.area == area) &&
             const DeepCollectionEquality().equals(other._borders, _borders) &&
             (identical(other.callingCode, callingCode) ||
@@ -1424,19 +1429,19 @@ class _$_Country implements _Country {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CountryCopyWith<_$_Country> get copyWith =>
-      __$$_CountryCopyWithImpl<_$_Country>(this, _$identity);
+  _$$_CountryDataCopyWith<_$_CountryData> get copyWith =>
+      __$$_CountryDataCopyWithImpl<_$_CountryData>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CountryToJson(
+    return _$$_CountryDataToJson(
       this,
     );
   }
 }
 
-abstract class _Country implements Country {
-  const factory _Country(
+abstract class _CountryData implements CountryData {
+  const factory _CountryData(
       {required final int? area,
       required final List<String?>? borders,
       required final String? callingCode,
@@ -1446,9 +1451,10 @@ abstract class _Country implements Country {
       required final int? population,
       required final double? populationDensity,
       required final Flag flag,
-      required final String? tld}) = _$_Country;
+      required final String? tld}) = _$_CountryData;
 
-  factory _Country.fromJson(Map<String, dynamic> json) = _$_Country.fromJson;
+  factory _CountryData.fromJson(Map<String, dynamic> json) =
+      _$_CountryData.fromJson;
 
   @override
   int? get area;
@@ -1472,7 +1478,7 @@ abstract class _Country implements Country {
   String? get tld;
   @override
   @JsonKey(ignore: true)
-  _$$_CountryCopyWith<_$_Country> get copyWith =>
+  _$$_CountryDataCopyWith<_$_CountryData> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
