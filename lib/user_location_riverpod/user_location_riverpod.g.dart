@@ -30,7 +30,7 @@ class _SystemHash {
 }
 
 String _$UserLocationRiverpodHash() =>
-    r'e7d320ee8796683ddf5fc5072886cf1043c0b20f';
+    r'7847e1ee580bf434ff0e8490cb3ff7a6fa9a8512';
 
 /// See also [UserLocationRiverpod].
 final userLocationRiverpodProvider =

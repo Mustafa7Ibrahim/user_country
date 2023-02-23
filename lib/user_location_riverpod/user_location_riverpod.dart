@@ -49,4 +49,8 @@ class UserLocationRiverpod extends _$UserLocationRiverpod {
   Future<Country> _getCountryFromIp(IpData ipData) async {
     return Country.parse(ipData.location!.country!.code!);
   }
+
+  Country updateCountry(Country country) {
+    return country;
+  }
 }
