@@ -50,7 +50,7 @@ class UserLocationRiverpod extends _$UserLocationRiverpod {
     return Country.parse(ipData.location!.country!.code!);
   }
 
-  Country updateCountry(Country country) {
-    return country;
+  updateCountry(Country country) {
+    return state = AsyncData(country);
   }
 }
