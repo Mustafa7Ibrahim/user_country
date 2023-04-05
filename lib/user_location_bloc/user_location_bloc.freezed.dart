@@ -18,19 +18,19 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$UserLocationEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(bool? local) started,
+    required TResult Function(bool? onlyEgypt) started,
     required TResult Function(Country country) update,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(bool? local)? started,
+    TResult? Function(bool? onlyEgypt)? started,
     TResult? Function(Country country)? update,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(bool? local)? started,
+    TResult Function(bool? onlyEgypt)? started,
     TResult Function(Country country)? update,
     required TResult orElse(),
   }) =>
@@ -80,7 +80,7 @@ abstract class _$$_StartedCopyWith<$Res> {
           _$_Started value, $Res Function(_$_Started) then) =
       __$$_StartedCopyWithImpl<$Res>;
   @useResult
-  $Res call({bool? local});
+  $Res call({bool? onlyEgypt});
 }
 
 /// @nodoc
@@ -93,12 +93,12 @@ class __$$_StartedCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? local = freezed,
+    Object? onlyEgypt = freezed,
   }) {
     return _then(_$_Started(
-      freezed == local
-          ? _value.local
-          : local // ignore: cast_nullable_to_non_nullable
+      onlyEgypt: freezed == onlyEgypt
+          ? _value.onlyEgypt
+          : onlyEgypt // ignore: cast_nullable_to_non_nullable
               as bool?,
     ));
   }
@@ -107,14 +107,14 @@ class __$$_StartedCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_Started implements _Started {
-  const _$_Started([this.local]);
+  const _$_Started({this.onlyEgypt});
 
   @override
-  final bool? local;
+  final bool? onlyEgypt;
 
   @override
   String toString() {
-    return 'UserLocationEvent.started(local: $local)';
+    return 'UserLocationEvent.started(onlyEgypt: $onlyEgypt)';
   }
 
   @override
@@ -122,11 +122,12 @@ class _$_Started implements _Started {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Started &&
-            (identical(other.local, local) || other.local == local));
+            (identical(other.onlyEgypt, onlyEgypt) ||
+                other.onlyEgypt == onlyEgypt));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, local);
+  int get hashCode => Object.hash(runtimeType, onlyEgypt);
 
   @JsonKey(ignore: true)
   @override
@@ -137,30 +138,30 @@ class _$_Started implements _Started {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(bool? local) started,
+    required TResult Function(bool? onlyEgypt) started,
     required TResult Function(Country country) update,
   }) {
-    return started(local);
+    return started(onlyEgypt);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(bool? local)? started,
+    TResult? Function(bool? onlyEgypt)? started,
     TResult? Function(Country country)? update,
   }) {
-    return started?.call(local);
+    return started?.call(onlyEgypt);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(bool? local)? started,
+    TResult Function(bool? onlyEgypt)? started,
     TResult Function(Country country)? update,
     required TResult orElse(),
   }) {
     if (started != null) {
-      return started(local);
+      return started(onlyEgypt);
     }
     return orElse();
   }
@@ -198,9 +199,9 @@ class _$_Started implements _Started {
 }
 
 abstract class _Started implements UserLocationEvent {
-  const factory _Started([final bool? local]) = _$_Started;
+  const factory _Started({final bool? onlyEgypt}) = _$_Started;
 
-  bool? get local;
+  bool? get onlyEgypt;
   @JsonKey(ignore: true)
   _$$_StartedCopyWith<_$_Started> get copyWith =>
       throw _privateConstructorUsedError;
@@ -268,7 +269,7 @@ class _$_Update implements _Update {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(bool? local) started,
+    required TResult Function(bool? onlyEgypt) started,
     required TResult Function(Country country) update,
   }) {
     return update(country);
@@ -277,7 +278,7 @@ class _$_Update implements _Update {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(bool? local)? started,
+    TResult? Function(bool? onlyEgypt)? started,
     TResult? Function(Country country)? update,
   }) {
     return update?.call(country);
@@ -286,7 +287,7 @@ class _$_Update implements _Update {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(bool? local)? started,
+    TResult Function(bool? onlyEgypt)? started,
     TResult Function(Country country)? update,
     required TResult orElse(),
   }) {
