@@ -18,19 +18,19 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$UserLocationEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function(bool? local) started,
     required TResult Function(Country country) update,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function(bool? local)? started,
     TResult? Function(Country country)? update,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function(bool? local)? started,
     TResult Function(Country country)? update,
     required TResult orElse(),
   }) =>
@@ -79,6 +79,8 @@ abstract class _$$_StartedCopyWith<$Res> {
   factory _$$_StartedCopyWith(
           _$_Started value, $Res Function(_$_Started) then) =
       __$$_StartedCopyWithImpl<$Res>;
+  @useResult
+  $Res call({bool? local});
 }
 
 /// @nodoc
@@ -87,54 +89,78 @@ class __$$_StartedCopyWithImpl<$Res>
     implements _$$_StartedCopyWith<$Res> {
   __$$_StartedCopyWithImpl(_$_Started _value, $Res Function(_$_Started) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? local = freezed,
+  }) {
+    return _then(_$_Started(
+      freezed == local
+          ? _value.local
+          : local // ignore: cast_nullable_to_non_nullable
+              as bool?,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$_Started implements _Started {
-  const _$_Started();
+  const _$_Started([this.local]);
+
+  @override
+  final bool? local;
 
   @override
   String toString() {
-    return 'UserLocationEvent.started()';
+    return 'UserLocationEvent.started(local: $local)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Started);
+        (other.runtimeType == runtimeType &&
+            other is _$_Started &&
+            (identical(other.local, local) || other.local == local));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, local);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_StartedCopyWith<_$_Started> get copyWith =>
+      __$$_StartedCopyWithImpl<_$_Started>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function(bool? local) started,
     required TResult Function(Country country) update,
   }) {
-    return started();
+    return started(local);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function(bool? local)? started,
     TResult? Function(Country country)? update,
   }) {
-    return started?.call();
+    return started?.call(local);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function(bool? local)? started,
     TResult Function(Country country)? update,
     required TResult orElse(),
   }) {
     if (started != null) {
-      return started();
+      return started(local);
     }
     return orElse();
   }
@@ -172,7 +198,12 @@ class _$_Started implements _Started {
 }
 
 abstract class _Started implements UserLocationEvent {
-  const factory _Started() = _$_Started;
+  const factory _Started([final bool? local]) = _$_Started;
+
+  bool? get local;
+  @JsonKey(ignore: true)
+  _$$_StartedCopyWith<_$_Started> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -237,7 +268,7 @@ class _$_Update implements _Update {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function(bool? local) started,
     required TResult Function(Country country) update,
   }) {
     return update(country);
@@ -246,7 +277,7 @@ class _$_Update implements _Update {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function(bool? local)? started,
     TResult? Function(Country country)? update,
   }) {
     return update?.call(country);
@@ -255,7 +286,7 @@ class _$_Update implements _Update {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function(bool? local)? started,
     TResult Function(Country country)? update,
     required TResult orElse(),
   }) {

@@ -14,20 +14,27 @@ class UserCountryBloc extends Bloc<UserLocationEvent, UserLocationState> {
     location = GetCountryRequest();
     on<UserLocationEvent>(
       (event, emit) async {
-        await event.map(
+        await event.when(
           started: (value) async {
             emit(const _Loading());
+            if (value == true) {
+              final Country c = await location.getEgyptLocal();
+              emit(_Loaded(c));
+              return;
+            }
             final i.IpData? ipData = await location.getCountryFromIP();
             if (ipData == null) {
               final Country c = await location.getCountryFromLocal();
               emit(_Loaded(c));
+              return;
             } else {
               final Country c = Country.parse(ipData.location!.country!.code!);
               emit(_Loaded(c));
+              return;
             }
           },
           update: (value) {
-            emit(_Loaded(value.country));
+            emit(_Loaded(value));
           },
         );
       },

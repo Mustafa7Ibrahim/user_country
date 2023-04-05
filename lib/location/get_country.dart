@@ -38,4 +38,8 @@ class GetCountryRequest {
     // Return the country object
     return c;
   }
+
+  Future<Country> getEgyptLocal() async {
+    return Country.parse("EG");
+  }
 }
